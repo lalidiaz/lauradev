@@ -1,4 +1,5 @@
 import styles from './styles/Home.module.scss';
+
 import profilePic from '../src/assets/avatar.png';
 import { Section, Footer, Contact } from '../src/components/index';
 import { motion } from 'framer-motion';
@@ -9,9 +10,9 @@ function App() {
       <main className={styles.main}>
         <div className={styles.presentation}>
           <motion.div
-            initial={{ x: '-150%' }}
-            animate={{ x: '0%' }}
-            transition={{ delay: 0.3, duration: 2 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 2 }}
             className={styles.imageContainer}
           >
             <img
@@ -23,17 +24,17 @@ function App() {
 
           <div className={styles.dev}>
             <motion.h2
-              initial={{ x: '100%' }}
-              animate={{ x: '0%' }}
-              transition={{ delay: 0.3, duration: 2 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 2 }}
               className={styles.myname}
             >
               Hi, I am Laura.
             </motion.h2>
             <motion.h1
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              transition={{ delay: 0.4, duration: 2 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5, duration: 2 }}
               className={styles.title}
             >
               Front-end developer
@@ -53,7 +54,7 @@ function App() {
             people live a better and happier life.
           </Section>
 
-          <Section title='Skills: '>
+          <Section title='Skills:'>
             HTML5, Javascript (ES6), Reactjs, Nextjs, Redux, React Native, CSS3,
             Scss, Material UI, Styled Components, Typescript, Git, Browser
             developer tools, Responsive Design.
