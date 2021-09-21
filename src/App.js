@@ -29,7 +29,7 @@ function App() {
               transition={{ delay: 0.5, duration: 2 }}
               className={styles.myname}
             >
-              Hi, I am Laura.
+              Hi, I'm Laura.
             </motion.h2>
             <motion.h1
               initial={{ opacity: 0 }}

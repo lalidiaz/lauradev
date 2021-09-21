@@ -2,20 +2,21 @@
 @import '../../styles/mixins';
 
 .content {
-  width: 90%;
+  width: 100%;
   height: auto;
-
+  padding: 20px;
   @include respond(desktop) {
-    width: 80%;
+    width: 93%;
+    padding: 0px;
   }
 
   .title {
     line-height: 0px;
     font-size: 24px;
-    font-family: $magilioregular;
+    font-family: $open-sans;
     color: $electric-pink;
   }
   .children {
-    font-family: $poppins;
+    font-family: $open-sans;
   }
 }
