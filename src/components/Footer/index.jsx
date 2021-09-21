@@ -13,7 +13,11 @@ export default function Footer() {
       </p>
       <p>
         <TiPencil /> Illustration made by{' '}
-        <a target='_blank' href='https://www.instagram.com/chiarailustra'>
+        <a
+          target='_blank'
+          rel='noreferrer'
+          href='https://www.instagram.com/chiarailustra'
+        >
           Chiara Ilustra
         </a>
       </p>

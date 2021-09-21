@@ -37,9 +37,9 @@ export default function Contact() {
       <div className={styles.container}>
         <ul className={styles.list}>
           {menu.map((item) => {
-            const { url, name, icon, id } = item;
+            const { url, icon, id } = item;
             return (
-              <a target='_blank' href={url}>
+              <a target='_blank' href={url} rel='noreferrer'>
                 <li key={id} className={styles.item}>
                   {icon}
                 </li>
