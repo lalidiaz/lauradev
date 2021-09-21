@@ -54,7 +54,7 @@ function App() {
             people live a better and happier life.
           </Section>
 
-          <Section title='Skills'>
+          <Section title='Skills: '>
             HTML5, Javascript (ES6), Reactjs, Nextjs, Redux, React Native, CSS3,
             Scss, Material UI, Styled Components, Typescript, Git, Browser
             developer tools, Responsive Design.
