@@ -1,5 +1,4 @@
 import styles from './styles/Home.module.scss';
-
 import profilePic from '../src/assets/avatar.png';
 import { Section, Footer, Contact } from '../src/components/index';
 import { motion } from 'framer-motion';
@@ -10,9 +9,9 @@ function App() {
       <main className={styles.main}>
         <div className={styles.presentation}>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 2 }}
+            initial={{ x: '-100vw' }}
+            animate={{ x: 0 }}
+            transition={{ delay: 0.3, duration: 2 }}
             className={styles.imageContainer}
           >
             <img
@@ -24,17 +23,17 @@ function App() {
 
           <div className={styles.dev}>
             <motion.h2
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5, duration: 2 }}
+              initial={{ x: '100vw' }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.3, duration: 2 }}
               className={styles.myname}
             >
               Hi, I am Laura.
             </motion.h2>
             <motion.h1
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5, duration: 2 }}
+              initial={{ x: '100vw' }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.4, duration: 2 }}
               className={styles.title}
             >
               Front-end developer

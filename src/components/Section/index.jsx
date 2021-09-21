@@ -7,7 +7,7 @@ export default function Section({ title, children }) {
       <motion.h4
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
+        transition={{ delay: 1, duration: 1 }}
         className={styles.title}
       >
         {title}{' '}
@@ -15,7 +15,7 @@ export default function Section({ title, children }) {
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 2 }}
+        transition={{ delay: 1, duration: 2 }}
         className={styles.children}
       >
         {children}
