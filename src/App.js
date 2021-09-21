@@ -9,8 +9,8 @@ function App() {
       <main className={styles.main}>
         <div className={styles.presentation}>
           <motion.div
-            initial={{ x: '-100vw' }}
-            animate={{ x: 0 }}
+            initial={{ x: '-150%' }}
+            animate={{ x: '0%' }}
             transition={{ delay: 0.3, duration: 2 }}
             className={styles.imageContainer}
           >
@@ -23,15 +23,15 @@ function App() {
 
           <div className={styles.dev}>
             <motion.h2
-              initial={{ x: '100vw' }}
-              animate={{ x: 0 }}
+              initial={{ x: '100%' }}
+              animate={{ x: '0%' }}
               transition={{ delay: 0.3, duration: 2 }}
               className={styles.myname}
             >
               Hi, I am Laura.
             </motion.h2>
             <motion.h1
-              initial={{ x: '100vw' }}
+              initial={{ x: '100%' }}
               animate={{ x: 0 }}
               transition={{ delay: 0.4, duration: 2 }}
               className={styles.title}
