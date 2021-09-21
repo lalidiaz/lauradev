@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.content {
+  width: 90%;
+  height: auto;
+
+  @include respond(desktop) {
+    width: 86%;
+  }
+
+  .title {
+    line-height: 0px;
+    font-size: 24px;
+    font-family: $magilioregular;
+    color: $electric-pink;
+  }
+  .children {
+    font-family: $poppins;
+  }
+}

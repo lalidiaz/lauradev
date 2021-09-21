@@ -1,0 +1,85 @@
+@import './mixins';
+@import './variables';
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 70px;
+
+    .presentation {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      @include respond(desktop) {
+        flex-direction: row;
+      }
+
+      .imageContainer {
+        width: 230px;
+        height: auto;
+        padding: 5px;
+        transform: rotate(-5deg);
+
+        .image {
+          width: 230px;
+          border-radius: 5px;
+        }
+      }
+      .dev {
+        padding: 20px;
+        text-align: center;
+        @include respond(desktop) {
+          text-align: left;
+        }
+
+        .title {
+          font-family: $magilioregular;
+          font-size: 60px;
+          color: $electric-pink;
+
+          @include respond(desktop) {
+            font-size: 80px;
+            line-height: 10px;
+          }
+        }
+
+        .myname {
+          font-family: $poppins;
+          font-size: 30px;
+          color: $brown;
+          line-height: 10px;
+          padding-top: 20px;
+        }
+      }
+    }
+
+    .content {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      @include respond(desktop) {
+        width: 85%;
+        padding: 20px;
+      }
+
+      .description {
+        font-family: $poppins;
+        font-size: 18px;
+        width: 100%;
+      }
+    }
+  }
+}

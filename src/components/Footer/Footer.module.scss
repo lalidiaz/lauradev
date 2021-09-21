@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $poppins;
+  font-size: 14px;
+  padding: 20px;
+  line-height: 0px;
+
+  @include respond(desktop) {
+    flex-direction: row;
+    height: 45px;
+  }
+}

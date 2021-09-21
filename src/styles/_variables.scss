@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+@font-face {
+  font-family: 'magilioregular';
+  src: url('../fonts/magilioregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//FONTS
+$magilioregular: 'magilioregular';
+$poppins: 'Poppins', sans-serif;
+
+//COLORS
+$brown: #b65a21;
+$electric-pink: #f091f9;
+$pink: #ff82a9;
+$gray: #d1a9ae;
+$baby-brown: #d7ccc8;
+$baby-baby-brown: #efebe9;
+$whiteish: #f5f5f5;
+$opaque-yellow: #d8d3c9;
+$black: rgba(49, 42, 43, 1);
+$violet: #c2b8cc;
