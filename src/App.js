@@ -1,5 +1,4 @@
 import styles from './styles/Home.module.scss';
-
 import profilePic from '../src/assets/avatar.png';
 import { Section, Footer, Contact } from '../src/components/index';
 import { motion } from 'framer-motion';
