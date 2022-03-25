@@ -62,7 +62,8 @@ function App() {
             <div className={styles.education}>
               <h5>Education</h5>
               <p>Frontend Development Coding Bootcamp</p>
-              <p>CourseIt, Buenos Aires.</p>
+
+              <p>March 2020 - June 2020 | CourseIt, Buenos Aires.</p>
             </div>
             <div className={styles.experience}>
               <h5>Experience</h5>
