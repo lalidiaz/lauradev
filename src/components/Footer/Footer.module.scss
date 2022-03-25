@@ -8,13 +8,14 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-family: $open-sans;
-  font-size: 14px;
+  font-family: $poppins;
+  color: $blue;
+  font-size: 1em;
   padding: 20px;
   line-height: 0px;
 
   @include respond(desktop) {
     flex-direction: row;
-    height: 45px;
+    height: 50px;
   }
 }

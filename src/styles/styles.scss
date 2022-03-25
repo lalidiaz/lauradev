@@ -1,0 +1,108 @@
+@import './mixins';
+@import './variables';
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 10px;
+
+  @include respond(desktop) {
+    flex-direction: row;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.34375em;
+    font-family: $poppins;
+    font-weight: bold;
+    color: $blue;
+    padding: 0;
+    margin: 0;
+
+    @include respond(desktop) {
+      width: 30%;
+      justify-content: space-around;
+    }
+
+    li {
+      cursor: pointer;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.projects-container {
+  background: $pink;
+
+  .projects-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 0px 20px;
+
+    @include respond(desktop) {
+      padding: 0px 50px;
+    }
+
+    h1 {
+      font-size: 2em;
+      font-family: $poppins;
+      color: $blue;
+      text-align: center;
+
+      @include respond(desktop) {
+        font-size: 4em;
+      }
+    }
+
+    a {
+      font-size: 1em;
+      color: $blue;
+      font-family: $poppins;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      @include respond(desktop) {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .project-card {
+    width: 100%;
+    color: $blue;
+    font-family: $poppins;
+    padding: 16px;
+
+    @include respond(desktop) {
+      padding: 30px;
+    }
+
+    .project-name {
+      font-weight: bold;
+      display: flex;
+      align-items: flex-start;
+      font-size: 1em;
+
+      @include respond(desktop) {
+        font-size: 1.8em;
+        align-items: center;
+      }
+    }
+
+    &:nth-child(even) {
+      background-color: $blue;
+      color: $pink;
+      border: 2px solid $pink;
+    }
+  }
+}

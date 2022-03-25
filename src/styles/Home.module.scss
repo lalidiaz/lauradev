@@ -3,80 +3,260 @@
 
 .container {
   height: 100%;
-  width: 100%;
+  background-color: $pink;
 
   .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     height: 100%;
-    width: 100%;
-    padding-top: 70px;
 
-    .presentation {
+    img {
+      width: 200px;
+      border-radius: 50%;
+
+      @include respond(desktop) {
+        width: 400px;
+      }
+    }
+    h1 {
+      text-align: center;
+      color: $blue;
+      font-size: 3.5em;
+      font-family: $poppins;
+      font-weight: bold;
+
+      @include respond(tablet) {
+        font-size: 4em;
+      }
+
+      @include respond(desktop) {
+        font-size: 6.25em;
+        line-height: 0px;
+      }
+    }
+    h2 {
+      text-align: center;
+      color: $blue;
+      font-size: 2em;
+      font-weight: lighter;
+      font-family: $poppins;
+    }
+    .content {
+      width: 100%;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
+
+      p {
+        color: $blue;
+        font-family: $poppins;
+        font-size: 1em;
+      }
+
+      .textContent {
+        width: 100%;
+        padding: 0px 20px;
+
+        @include respond(desktop) {
+          padding: 0px 100px;
+        }
+
+        h3 {
+          color: $blue;
+          font-weight: bold;
+          font-size: 2em;
+          font-family: $poppins;
+          text-align: center;
+
+          @include respond(desktop) {
+            font-size: 2.75em;
+          }
+        }
+
+        .text {
+          color: $blue;
+          font-size: 1em;
+          font-family: $poppins;
+          text-align: center;
+          font-weight: lighter;
+
+          @include respond(desktop) {
+            font-size: 1.875em;
+          }
+        }
+      }
+    }
+
+    .links {
+      background-color: $blue;
+
+      height: auto;
+      color: $pink;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0px;
+
+      @include respond(desktop) {
+        height: auto;
+        padding: 50px 0px;
+        width: 100%;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+          a {
+            text-decoration: none;
+            font-size: 2em;
+            font-family: $poppins;
+            font-weight: lighter;
+            cursor: pointer;
+
+            @include respond(desktop) {
+              font-size: 5em;
+            }
+          }
+        }
+      }
+    }
+
+    .skillsContainer {
+      display: flex;
+      width: 100%;
+      text-align: center;
+      font-family: $poppins;
       flex-direction: column;
 
       @include respond(desktop) {
         flex-direction: row;
       }
 
-      .imageContainer {
-        width: 230px;
-        height: auto;
-
-        .image {
-          width: 230px;
-          border-radius: 5px;
-        }
-      }
-      .dev {
+      .experienceContainer {
+        width: 100%;
         padding: 20px;
-        text-align: center;
+        border: 1px solid $pink;
+        background: $blue;
+        color: $pink;
+        padding-bottom: 100px;
+
         @include respond(desktop) {
-          text-align: left;
+          width: 50%;
+          padding: 30px;
         }
-
-        .title {
-          font-family: $magilioregular;
-          font-size: 60px;
-          color: $electric-pink;
-
+        h4 {
+          font-size: 2em;
           @include respond(desktop) {
-            font-size: 80px;
-            line-height: 10px;
+            font-size: 2.75em;
           }
         }
 
-        .myname {
-          font-family: $open-sans;
-          font-size: 30px;
-          color: $brown;
-          line-height: 10px;
-          padding-top: 20px;
+        .education {
+          h5 {
+            font-size: 2em;
+            @include respond(desktop) {
+              font-size: 1.5em;
+            }
+          }
+          p {
+            font-size: 1.5em;
+            font-weight: lighter;
+          }
+        }
+        .resume {
+          border: 1px solid $pink;
+          border-radius: 50px;
+          padding: 10px 20px;
+          font-size: 2em;
+          font-weight: lighter;
+          cursor: pointer;
+          text-decoration: none;
+        }
+        .experience {
+          padding-bottom: 50px;
+
+          h5 {
+            font-size: 2em;
+          }
+          p {
+            font-size: 1.5em;
+            font-weight: lighter;
+
+            span {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .skills {
+        padding: 20px;
+        width: 100%;
+        color: $blue;
+
+        @include respond(desktop) {
+          width: 50%;
+          padding: 30px;
+        }
+
+        h5 {
+          font-size: 2em;
+          @include respond(desktop) {
+            font-size: 2.75em;
+          }
+        }
+
+        .ul {
+          padding: 0px;
+          margin: 0px;
+          li {
+            font-weight: lighter;
+            font-size: 1.5em;
+            padding-bottom: 20px;
+
+            @include respond(desktop) {
+              font-size: 2em;
+            }
+          }
         }
       }
     }
+  }
 
-    .content {
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
+  .contact {
+    background-color: $blue;
+    color: $pink;
+    font-family: $poppins;
+    padding: 20px;
+
+    @include respond(desktop) {
+      padding: 50px 100px;
+    }
+
+    h4 {
+      font-size: 2em;
+      line-height: 0px;
 
       @include respond(desktop) {
-        width: 85%;
-        padding: 20px;
+        font-size: 2.5em;
       }
+    }
+    p {
+      font-size: 1em;
+      font-weight: lighter;
+      @include respond(desktop) {
+        font-size: 1.8em;
+      }
+    }
 
-      .description {
-        font-family: $open-sans;
-        font-size: 18px;
-        width: 100%;
+    .mail {
+      text-align: right;
+      font-size: 1em;
+      font-weight: bold;
+      @include respond(desktop) {
+        font-size: 1.5em;
       }
     }
   }

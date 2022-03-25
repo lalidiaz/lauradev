@@ -1,7 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #efebe9;
+  height: 100%;
+  width: 100%;
+  border: 20px solid #0564dc;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    border: 10px solid #0564dc;
+  }
 }
 
 a {
