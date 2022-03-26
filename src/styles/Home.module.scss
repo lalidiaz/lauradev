@@ -25,6 +25,7 @@
 
       @include respond(tablet) {
         font-size: 4em;
+        line-height: inherit;
       }
 
       @include respond(desktop) {
