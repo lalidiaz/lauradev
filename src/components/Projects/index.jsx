@@ -9,10 +9,8 @@ export default function Projects() {
       <div className='projects-header'>
         <h1>Projects</h1>
         <Link to='/'>
-          <a>
-            <AiOutlineArrowLeft />
-            Back
-          </a>
+          <AiOutlineArrowLeft />
+          Back
         </Link>
       </div>
 
