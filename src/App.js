@@ -1,5 +1,4 @@
 import styles from './styles/Home.module.scss';
-import { Link } from 'react-router-dom';
 import { Footer } from './components/index';
 import avatar from './assets/avatar.JPG';
 import { Header } from './components/index';
