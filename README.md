@@ -1,1 +1,1 @@
-My new landing ♥️ https://lauradiaz.dev/
+My new portfolio ♥️ https://laura-diaz-dev-af1e1.web.app/
