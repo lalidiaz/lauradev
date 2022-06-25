@@ -1,118 +1,112 @@
-import styles from './styles/Home.module.scss';
-import { Footer } from './components/index';
-import avatar from './assets/avatar.JPG';
-import { Header } from './components/index';
-import { skills, links } from './texts';
-import cv from './assets/LauraDiazCV.pdf';
+import { experiences, media } from "./texts";
+import Header from "./components/Header";
+import AnimatedCursor from "react-animated-cursor";
+import { GoLink } from "react-icons/go";
 
 function App() {
   return (
-    <div className={styles.container}>
-      <Header />
-      <main className={styles.main}>
-        <h1>Hey! I'm Laura Diaz</h1>
-        <h2> Frontend Developer</h2>
-        <div className={styles.content}>
-          <img src={avatar} alt='avatar' className={styles.avatar} />
+    <>
+      {" "}
+      <AnimatedCursor
+        color='159, 168, 218'
+        innerSize={8}
+        outerSize={35}
+        innerScale={1}
+        outerScale={1.7}
+        outerAlpha={0}
+        outerStyle={{
+          border: "3px solid #9fa8da",
+        }}
+      />
+      <main className='main'>
+        <div className='container'>
+          <div className='left'>
+            <Header />
 
-          <div className={styles.textContent}>
-            <h3>Here's my story</h3>
-            <p className={styles.text}>
-              After spending 4 years in the clouds, literally, while working as
-              a cabin crew, I started missing the thrills of learning and the
-              challenges and excitement of putting new skills into action.
-              Hence, I decided to study something that always attracted me,
-              front-end development.
-            </p>
-            <p className={styles.text}>
-              I instantly fell in love with it since it is a field that is
-              constantly evolving which gives me the opportunity of learning new
-              things every day.
-            </p>
-            <p className={styles.text}>
-              I enjoy creating useful and beautiful products that help people
-              live a better and happier life.
-            </p>
-          </div>
-        </div>
-        <div className={styles.links}>
-          <ul>
-            <li>
-              <a href={cv} download>
-                Resume
-              </a>
-            </li>
-            {links.map((item) => {
-              return (
-                <li>
-                  <a href={item.href} target='_blank' rel='noreferrer'>
-                    {item.name}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className={styles.skillsContainer}>
-          <div className={styles.experienceContainer}>
-            <h4>My Experience So Far</h4>
-
-            <div className={styles.education}>
-              <h5>Education</h5>
-              <p>Frontend Development Coding Bootcamp</p>
-
-              <p>March 2020 - June 2020 | CourseIt, Buenos Aires.</p>
-            </div>
-            <div className={styles.experience}>
-              <h5>Experience</h5>
-              <div>
-                <p>
-                  <span>Frontend Developer</span> | Dorothy
-                </p>
-                <p>Jun 2021 - Present</p>
-              </div>
-              <div>
-                <p>
-                  <span>Frontend Developer</span> | Freelance
-                </p>
-                <a
-                  target='_blank'
-                  href='https://ferminguerrero.com/'
-                  rel='noreferrer'
-                  className={styles.ferminLink}
-                >
-                  Fermin Guerrero Design{' '}
+            <div className='text'>
+              <h3>Hi! </h3>
+              <h1>I'm Laura,</h1>
+              <p className='frontend'>Frontend Developer</p>
+              <div className='frontend-icons'>
+                <a href='mailto:lauradiaz1586@gmail.com'>
+                  <img src='/icons/email.svg' alt='email-icon' className='icon' />
                 </a>
-                <p>Jun 2020 - May 2021</p>
+                <a href='https://github.com/lalidiaz' target='_blank' rel='noreferrer'>
+                  <img src='/icons/u_github.svg' alt='github-icon' className='icon' />
+                </a>
+                <a href='https://www.linkedin.com/in/lauradiaz91/' target='_blank' rel='noreferrer'>
+                  <img src='/icons/u_linkedin.svg' alt='linkedin-icon' className='icon' />
+                </a>
               </div>
             </div>
-            <a className={styles.resume} href={cv} download>
-              Resume
-            </a>
           </div>
-          <div className={styles.skills}>
-            <h5>Skills & Interests</h5>
-            <ul className={styles.ul}>
-              {skills.map((item) => (
-                <li key={item.id} className={styles.item}>
-                  {item.name}
-                </li>
-              ))}
-            </ul>
+
+          <div className='right'>
+            <img src='/avatar.JPG' alt='avatar' className='avatar' />
+            <p className='about-me'>About me</p>
+            <p className='about-me-text'>I'm a Frontend Developer with 2 years of experience in blending the art of design with skill of programming to deliver an immersive and engaging user experience through efficient website development and proactive feature optimization.</p>
           </div>
         </div>
-        <div className={styles.contact}>
-          <h4>Say Hi!</h4>
-          <p>
-            Get In Touch, my inbox is always open. Whether you have a question
-            or just want to say hi, I’ll try my best to get back to you!
-          </p>
-          <p className={styles.mail}>lauradiaz1586@gmail.com</p>
+
+        <div className='experience'>
+          <h4>Experience</h4>
+
+          {experiences.map((item) => (
+            <div key={item.id} className='experience-card'>
+              <p className='experience-title'>{item.title}</p>
+              <p className='experience-dates'>{item.dates}</p>
+              <p className='experience-description'>{item.description}</p>
+              {item.techStack && <p className='experience-description-techstack'>{item.techStack}</p>}
+              {item.link && (
+                <p className='experince-link'>
+                  <GoLink size={15} /> See the link{" "}
+                  <a href={item.dateslinkUrl} className='experince-link-a' target='_blank' rel='noreferrer'>
+                    here.
+                  </a>
+                </p>
+              )}
+            </div>
+          ))}
         </div>
+
+        <div className='education'>
+          <h4 className='education-title'>Education</h4>
+          <p className='education-name'>Frontend Development Coding Bootcamp - 2020</p>
+          <p className='education-description'> Frontend development coding bootcamp with an extension of +200 hours.</p>
+          <p className='education-skills'>Skills: HTML5, CSS, Javascript (ES6), ReactJs, Redux, NextJs, Git, Responsive Design, Testing and Debugging, Browser developer tools.</p>
+        </div>
+
+        <div className='blog'>
+          <h4 className='blog-title'>Some posts & study notes</h4>
+          <div className='blog-wrapper'>
+            {media.map((m) => (
+              <div key={m.key} className='blog-item'>
+                {m.isBlog ? (
+                  <a href={m.href} alt={m.title} className='blog-item-link' target='_blank' rel='noreferrer'>
+                    <GoLink size={15} /> {m.title}
+                  </a>
+                ) : (
+                  <a href={m.href} alt={m.title} download className='blog-item-link'>
+                    <GoLink size={15} /> {m.title}
+                  </a>
+                )}
+
+                <p className='blog-item-lang'>Lang: {m.lang}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='email-wrapper'>
+          <p className='email-text'>Get in touch, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you! 🙂</p>
+          <p className='email-mail'>lauradiaz1586@gmail.com</p>
+        </div>
+
+        <footer>
+          <p>Made with ♥️ by me. </p>
+          <p>Laura © 2022</p>
+        </footer>
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }
 

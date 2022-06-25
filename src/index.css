@@ -3,17 +3,19 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  border: 20px solid #0564dc;
+  font-family: "Merriweather", serif;
+  background-color: #ede9de;
 }
 
 @media only screen and (max-width: 600px) {
   body {
-    border: 10px solid #0564dc;
+    /* border: 10px solid #0564dc; */
   }
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 * {
@@ -22,5 +24,4 @@ a {
 
 li {
   list-style: none;
-  text-decoration: none;
 }

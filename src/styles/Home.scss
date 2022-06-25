@@ -1,0 +1,252 @@
+.main {
+  height: 100%;
+  width: 100%;
+
+  .container {
+    background: $gray;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include respond(desktop) {
+      height: 100%;
+      flex-direction: row;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+
+      @include respond(desktop) {
+        width: 60%;
+      }
+    }
+
+    .text {
+      width: 100%;
+      color: $white;
+      padding: 20px;
+
+      @include respond(desktop) {
+        padding: 100px;
+      }
+
+      h3 {
+        font-size: 2em;
+        font-weight: 700;
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 2em;
+
+        @include respond(desktop) {
+          font-size: 2.254em;
+        }
+      }
+
+      .frontend {
+        font-size: 2em;
+
+        @include respond(desktop) {
+          font-size: 2.254em;
+        }
+      }
+      .frontend-icons {
+        text-align: center;
+
+        @include respond(desktop) {
+          text-align: left;
+        }
+      }
+
+      div {
+        a {
+          .icon {
+            height: 40px;
+            width: 40px;
+            margin: 10px;
+          }
+        }
+      }
+    }
+
+    .right {
+      background-color: $cream;
+      width: 100%;
+      padding: 30px 20px 0px 20px;
+
+      @include respond(desktop) {
+        width: 40%;
+        padding: 100px;
+      }
+      .avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px solid $gray;
+      }
+      .about-me {
+        font-family: $lato;
+        color: $gray;
+
+        font-size: 2em;
+
+        @include respond(desktop) {
+          font-size: 2.254em;
+        }
+      }
+      .about-me-text {
+        font-size: 1em;
+        line-height: 32px;
+
+        @include respond(desktop) {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+  .experience {
+    padding: 20px;
+    border-bottom: 1px solid $gray;
+
+    @include respond(desktop) {
+      padding: 50px 100px 50px;
+    }
+    h4 {
+      color: $gray;
+      font-family: $lato;
+      font-size: 2em;
+    }
+    .experience-card {
+      padding: 20px 0px;
+
+      @include respond(desktop) {
+        padding: 0px 20px 0px 20px;
+      }
+
+      .experience-dates {
+        font-weight: 300;
+        font-style: italic;
+      }
+      .experience-title {
+        font-weight: 700;
+      }
+      .experience-description {
+        font-weight: 300;
+      }
+
+      .experience-description-techstack {
+        background-color: hsla(0, 1%, 49%, 0.165);
+        padding: 10px;
+        width: auto;
+        border-radius: 4px;
+      }
+
+      .experince-link {
+        font-style: italic;
+        .experince-link-a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .education {
+    padding: 0px 20px 20px;
+    border-bottom: 1px solid $gray;
+
+    @include respond(desktop) {
+      padding: 50px 100px;
+    }
+    .education-title {
+      color: $gray;
+      font-family: $lato;
+      font-size: 2em;
+    }
+    .education-name {
+      font-weight: 700;
+    }
+    .education-description {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .education-skills {
+      font-weight: 300;
+    }
+  }
+
+  .blog {
+    padding: 0px 20px;
+
+    @include respond(desktop) {
+      padding: 50px 100px;
+    }
+
+    .blog-title {
+      color: $gray;
+      font-family: $lato;
+      font-size: 2em;
+    }
+    .blog-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+
+      @include respond(desktop) {
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+      .blog-item {
+        padding: 20px 0px;
+        width: 100%;
+
+        @include respond(desktop) {
+          width: 33%;
+        }
+      }
+      .blog-item-link {
+        font-style: italic;
+        font-weight: 300;
+        text-decoration: underline;
+      }
+      .blog-item-lang {
+      }
+    }
+  }
+
+  .email-wrapper {
+    border: 1px solid $gray;
+    text-align: left;
+    padding: 20px 20px 100px 20px;
+
+    @include respond(desktop) {
+      text-align: center;
+      padding: 50px 100px 100px;
+    }
+
+    .email-text {
+      font-weight: 700;
+    }
+    .email-mail {
+      font-weight: 300;
+    }
+  }
+
+  footer {
+    color: $cream;
+    background-color: $gray;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    font-size: 0.8em;
+    font-family: $lato;
+  }
+}
