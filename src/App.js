@@ -2,6 +2,7 @@ import { experiences, media } from "./texts";
 import Header from "./components/Header";
 import AnimatedCursor from "react-animated-cursor";
 import { GoLink } from "react-icons/go";
+import { FiFileText } from "react-icons/fi";
 
 function App() {
   return (
@@ -36,6 +37,11 @@ function App() {
                 </a>
                 <a href='https://www.linkedin.com/in/lauradiaz91/' target='_blank' rel='noreferrer'>
                   <img src='/icons/u_linkedin.svg' alt='linkedin-icon' className='icon' />
+                </a>
+                <a href='/LauraDiazCV.pdf' download>
+                  <span className='icon'>
+                    <FiFileText size={40} />
+                  </span>
                 </a>
               </div>
             </div>
