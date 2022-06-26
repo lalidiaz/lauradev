@@ -50,7 +50,7 @@ function App() {
           <div className='right'>
             <img src='/avatar.JPG' alt='avatar' className='avatar' />
             <p className='about-me'>About me</p>
-            <p className='about-me-text'>I'm a Frontend Developer with 2 years of experience in blending the art of design with skill of programming to deliver an immersive and engaging user experience through efficient website development and proactive feature optimization.</p>
+            <p className='about-me-text'>I'm a Frontend Developer with two years of experience in blending the art of design with the skill of programming to deliver an immersive and engaging user experience through efficient website development and proactive feature optimization.</p>
           </div>
         </div>
 
