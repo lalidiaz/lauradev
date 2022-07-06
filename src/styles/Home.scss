@@ -153,6 +153,28 @@
     }
   }
 
+  .skills {
+    padding: 0px 20px 20px;
+    border-bottom: 1px solid $gray;
+
+    @include respond(desktop) {
+      padding: 0px 0px 50px 100px;
+    }
+    .skills-title {
+      color: $gray;
+      font-family: $lato;
+      font-size: 2em;
+    }
+    .skills-list {
+      list-style: none;
+
+      padding-left: 0px;
+      .skills-list-item {
+        line-height: 52px;
+      }
+    }
+  }
+
   .education {
     padding: 0px 20px 20px;
     border-bottom: 1px solid $gray;
