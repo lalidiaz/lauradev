@@ -4,8 +4,83 @@ import AnimatedCursor from "react-animated-cursor";
 import { GoLink } from "react-icons/go";
 import { FiFileText } from "react-icons/fi";
 import { TbCode } from "react-icons/tb";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import useWindowDimensions from "./hooks/useWindowDimensions";
 
 function App() {
+  const { width } = useWindowDimensions();
+  const isMobile = width <= 768;
+
+  const greetingAnimation = useAnimation();
+  const experienceAnimation = useAnimation();
+  const skillsAnimation = useAnimation();
+  const blogAnimation = useAnimation();
+  const contactAnimation = useAnimation();
+  const educationAnimation = useAnimation();
+
+  const [greetingRef, greetingInView] = useInView({
+    triggerOnce: true,
+    rootMargin: isMobile ? "-50px" : "-100px",
+  });
+  const [experienceRef, experienceInView] = useInView({
+    triggerOnce: true,
+    rootMargin: isMobile ? "-75px" : "-100px",
+  });
+  const [skillsRef, skillsInView] = useInView({
+    triggerOnce: true,
+    rootMargin: isMobile ? "-75px" : "-100px",
+  });
+  const [educationRef, educationInView] = useInView({
+    triggerOnce: true,
+    rootMargin: isMobile ? "-75px" : "-100px",
+  });
+  const [blogRef, blogInView] = useInView({
+    triggerOnce: true,
+    rootMargin: isMobile ? "-100px" : "-300px",
+  });
+  const [contactRef, contactInView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px",
+  });
+
+  useEffect(() => {
+    if (greetingInView) {
+      greetingAnimation.start("visible");
+    }
+  }, [greetingAnimation, greetingInView]);
+
+  useEffect(() => {
+    if (experienceInView) {
+      experienceAnimation.start("visible");
+    }
+  }, [experienceAnimation, experienceInView]);
+
+  useEffect(() => {
+    if (blogInView) {
+      blogAnimation.start("visible");
+    }
+  }, [blogAnimation, blogInView]);
+
+  useEffect(() => {
+    if (contactInView) {
+      contactAnimation.start("visible");
+    }
+  }, [contactAnimation, contactInView]);
+
+  useEffect(() => {
+    if (skillsInView) {
+      skillsAnimation.start("visible");
+    }
+  }, [skillsAnimation, skillsInView]);
+
+  useEffect(() => {
+    if (educationInView) {
+      educationAnimation.start("visible");
+    }
+  }, [educationAnimation, educationInView]);
+
   const skills = [
     "HTML5",
     "CSS3",
@@ -16,6 +91,14 @@ function App() {
     "Git",
     "Browser dev tools",
   ];
+
+  const variants = {
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+    hidden: { opacity: 0, y: 72 },
+  };
 
   return (
     <>
@@ -36,11 +119,55 @@ function App() {
           <div className="left">
             <Header />
 
-            <div className="text">
-              <h3>Hi! </h3>
-              <h1>I'm Laura,</h1>
-              <p className="frontend">Frontend Developer</p>
-              <div className="frontend-icons">
+            <div className="text" ref={greetingRef}>
+              <motion.h3
+                animate={greetingAnimation}
+                initial="hidden"
+                variants={variants}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.6, 0.05, -0.01, 0.9],
+                  delay: 0.45,
+                }}
+              >
+                Hi!{" "}
+              </motion.h3>
+              <motion.h1
+                animate={greetingAnimation}
+                initial="hidden"
+                variants={variants}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.6, 0.05, -0.01, 0.9],
+                  delay: 0.5,
+                }}
+              >
+                I'm Laura,
+              </motion.h1>
+              <motion.p
+                className="frontend"
+                animate={greetingAnimation}
+                initial="hidden"
+                variants={variants}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.6, 0.05, -0.01, 0.9],
+                  delay: 0.6,
+                }}
+              >
+                Frontend Developer
+              </motion.p>
+              <motion.div
+                className="frontend-icons"
+                animate={greetingAnimation}
+                initial="hidden"
+                variants={variants}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.6, 0.05, -0.01, 0.9],
+                  delay: 0.6,
+                }}
+              >
                 <a href="mailto:lauradiaz1586@gmail.com">
                   <img src="/icons/email.svg" alt="email-icon" className="icon" />
                 </a>
@@ -55,34 +182,148 @@ function App() {
                     <FiFileText size={40} />
                   </span>
                 </a>
-              </div>
+              </motion.div>
             </div>
           </div>
 
           <div className="right">
-            <img src="/avatar.JPG" alt="avatar" className="avatar" />
-            <p className="about-me">About me</p>
-            <p className="about-me-text">
+            <motion.img
+              src="/avatar.JPG"
+              alt="avatar"
+              className="avatar"
+              animate={greetingAnimation}
+              initial="hidden"
+              variants={variants}
+              transition={{
+                duration: 0.8,
+                ease: [0.6, 0.05, -0.01, 0.9],
+                delay: 0.45,
+              }}
+            />
+            <motion.p
+              className="about-me"
+              animate={greetingAnimation}
+              initial="hidden"
+              variants={variants}
+              transition={{
+                duration: 0.8,
+                ease: [0.6, 0.05, -0.01, 0.9],
+                delay: 0.5,
+              }}
+            >
+              About me
+            </motion.p>
+            <motion.p
+              className="about-me-text"
+              animate={greetingAnimation}
+              initial="hidden"
+              variants={variants}
+              transition={{
+                duration: 0.8,
+                ease: [0.6, 0.05, -0.01, 0.9],
+                delay: 0.6,
+              }}
+            >
               I'm a Frontend Developer with two years of experience in blending the art of design
               with the skill of programming to deliver an immersive and engaging user experience
               through efficient website development and proactive feature optimization.
-            </p>
+            </motion.p>
           </div>
         </div>
 
-        <div className="experience">
-          <h4>Experience</h4>
+        <div className="experience" ref={experienceRef}>
+          <motion.h4
+            animate={experienceAnimation}
+            initial="hidden"
+            variants={variants}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, 0.05, -0.01, 0.9],
+              delay: 0.45,
+            }}
+          >
+            Experience
+          </motion.h4>
 
           {experiences.map((item) => (
-            <div key={item.id} className="experience-card">
-              <p className="experience-title">{item.title}</p>
-              <p className="experience-dates">{item.dates}</p>
-              <p className="experience-description">{item.description}</p>
+            <motion.div
+              key={item.id}
+              className="experience-card"
+              animate={experienceAnimation}
+              initial="hidden"
+              variants={variants}
+              transition={{
+                duration: 0.8,
+                ease: [0.6, 0.05, -0.01, 0.9],
+                delay: 0.5,
+              }}
+            >
+              <motion.p
+                className="experience-title"
+                animate={experienceAnimation}
+                initial="hidden"
+                variants={variants}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.6, 0.05, -0.01, 0.9],
+                  delay: 0.6,
+                }}
+              >
+                {item.title}
+              </motion.p>
+              <motion.p
+                animate={experienceAnimation}
+                initial="hidden"
+                variants={variants}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.6, 0.05, -0.01, 0.9],
+                  delay: 0.6,
+                }}
+                className="experience-dates"
+              >
+                {item.dates}
+              </motion.p>
+              <motion.p
+                animate={experienceAnimation}
+                initial="hidden"
+                variants={variants}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.6, 0.05, -0.01, 0.9],
+                  delay: 0.6,
+                }}
+                className="experience-description"
+              >
+                {item.description}
+              </motion.p>
               {item.techStack && (
-                <p className="experience-description-techstack">{item.techStack}</p>
+                <motion.p
+                  animate={experienceAnimation}
+                  initial="hidden"
+                  variants={variants}
+                  transition={{
+                    duration: 0.8,
+                    ease: [0.6, 0.05, -0.01, 0.9],
+                    delay: 0.7,
+                  }}
+                  className="experience-description-techstack"
+                >
+                  {item.techStack}
+                </motion.p>
               )}
               {item.link && (
-                <p className="experince-link">
+                <motion.p
+                  className="experince-link"
+                  animate={experienceAnimation}
+                  initial="hidden"
+                  variants={variants}
+                  transition={{
+                    duration: 0.8,
+                    ease: [0.6, 0.05, -0.01, 0.9],
+                    delay: 0.7,
+                  }}
+                >
                   <GoLink size={15} /> See the link{" "}
                   <a
                     href={item.dateslinkUrl}
@@ -92,42 +333,129 @@ function App() {
                   >
                     here.
                   </a>
-                </p>
+                </motion.p>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="skills">
-          <h4 className="skills-title">Skills</h4>
-          <ul className="skills-list">
+        <div className="skills" ref={skillsRef}>
+          <motion.h4
+            className="skills-title"
+            animate={skillsAnimation}
+            initial="hidden"
+            variants={variants}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, 0.05, -0.01, 0.9],
+              delay: 0.45,
+            }}
+          >
+            Skills
+          </motion.h4>
+          <motion.ul
+            className="skills-list"
+            initial="hidden"
+            animate={skillsAnimation}
+            variants={variants}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, 0.05, -0.01, 0.9],
+              delay: 0.6,
+            }}
+          >
             {skills.map((skill, index) => (
               <li className="skills-list-item" key={index}>
                 <TbCode /> {skill}
               </li>
             ))}
-      
-          </ul>
+          </motion.ul>
         </div>
 
-        <div className="education">
-          <h4 className="education-title">Education</h4>
-          <p className="education-name">Frontend Development Coding Bootcamp - 2020</p>
-          <p className="education-description">
-            {" "}
+        <div className="education" ref={educationRef}>
+          <motion.h4
+            className="education-title"
+            initial="hidden"
+            animate={educationAnimation}
+            variants={variants}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, 0.05, -0.01, 0.9],
+              delay: 0.45,
+            }}
+          >
+            Education
+          </motion.h4>
+          <motion.p
+            className="education-name"
+            initial="hidden"
+            animate={educationAnimation}
+            variants={variants}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, 0.05, -0.01, 0.9],
+              delay: 0.5,
+            }}
+          >
+            Frontend Development Coding Bootcamp - 2020
+          </motion.p>
+          <motion.p
+            className="education-description"
+            animate={educationAnimation}
+            initial="hidden"
+            variants={variants}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, 0.05, -0.01, 0.9],
+              delay: 0.6,
+            }}
+          >
             Frontend development coding bootcamp with an extension of +200 hours.
-          </p>
-          <p className="education-skills">
+          </motion.p>
+          <motion.p
+            className="education-skills"
+            animate={educationAnimation}
+            initial="hidden"
+            variants={variants}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, 0.05, -0.01, 0.9],
+              delay: 0.6,
+            }}
+          >
             Skills: HTML5, CSS, Javascript (ES6), ReactJs, Redux, NextJs, Git, Responsive Design,
             Testing and Debugging, Browser developer tools.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="blog">
-          <h4 className="blog-title">Some posts & study notes</h4>
+        <div className="blog" ref={blogRef}>
+          <motion.h4
+            className="blog-title"
+            initial="hidden"
+            variants={variants}
+            animate={blogAnimation}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, 0.05, -0.01, 0.9],
+              delay: 0.45,
+            }}
+          >
+            Some posts & study notes
+          </motion.h4>
           <div className="blog-wrapper">
             {media.map((m) => (
-              <div key={m.key} className="blog-item">
+              <motion.div
+                animate={blogAnimation}
+                key={m.key}
+                className="blog-item"
+                initial="hidden"
+                variants={variants}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.6, 0.05, -0.01, 0.9],
+                  delay: 0.6,
+                }}
+              >
                 {m.isBlog ? (
                   <a
                     href={m.href}
@@ -145,16 +473,38 @@ function App() {
                 )}
 
                 <p className="blog-item-lang">Lang: {m.lang}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
-        <div className="email-wrapper">
-          <p className="email-text">
+        <div className="email-wrapper" ref={contactRef}>
+          <motion.p
+            className="email-text"
+            initial="hidden"
+            animate={blogAnimation}
+            variants={variants}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, 0.05, -0.01, 0.9],
+              delay: 0.45,
+            }}
+          >
             Get in touch, my inbox is always open. Whether you have a question or just want to say
             hi, I'll try my best to get back to you! 🙂
-          </p>
-          <p className="email-mail">lauradiaz1586@gmail.com</p>
+          </motion.p>
+          <motion.p
+            className="email-mail"
+            initial="hidden"
+            variants={variants}
+            animate={blogAnimation}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, 0.05, -0.01, 0.9],
+              delay: 0.5,
+            }}
+          >
+            lauradiaz1586@gmail.com
+          </motion.p>
         </div>
 
         <footer>

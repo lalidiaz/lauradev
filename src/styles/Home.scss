@@ -21,6 +21,8 @@
 
       @include respond(desktop) {
         width: 60%;
+
+        min-height: 700px;
       }
     }
 
