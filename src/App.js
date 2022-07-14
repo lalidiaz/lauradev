@@ -83,13 +83,15 @@ function App() {
 
   const skills = [
     "HTML5",
-    "CSS3",
-    "Javascript",
-    "Reactjs",
+    "CSS",
+    "Javascript (ES6)",
     "Redux",
     "Nextjs",
-    "Git",
-    "Browser dev tools",
+    "Reactjs",
+    "Testing and Debugging",
+    "Browser developer tools",
+    "Responsive Design",
+    "Git & Github",
   ];
 
   const variants = {
@@ -245,9 +247,9 @@ function App() {
             Experience
           </motion.h4>
 
-          {experiences.map((item) => (
+          {experiences.map(({ id, title, dates, tasks, techStack, link, dateslinkUrl }) => (
             <motion.div
-              key={item.id}
+              key={id}
               className="experience-card"
               animate={experienceAnimation}
               initial="hidden"
@@ -269,7 +271,7 @@ function App() {
                   delay: 0.6,
                 }}
               >
-                {item.title}
+                {title}
               </motion.p>
               <motion.p
                 animate={experienceAnimation}
@@ -282,9 +284,9 @@ function App() {
                 }}
                 className="experience-dates"
               >
-                {item.dates}
+                {dates}
               </motion.p>
-              <motion.p
+              <motion.ul
                 animate={experienceAnimation}
                 initial="hidden"
                 variants={variants}
@@ -293,11 +295,17 @@ function App() {
                   ease: [0.6, 0.05, -0.01, 0.9],
                   delay: 0.6,
                 }}
-                className="experience-description"
               >
-                {item.description}
-              </motion.p>
-              {item.techStack && (
+                {Object.values(tasks).map((task) => {
+                  return (
+                    <li className="experience-description" key={task}>
+                      {task}
+                    </li>
+                  );
+                })}
+              </motion.ul>
+
+              {techStack && (
                 <motion.p
                   animate={experienceAnimation}
                   initial="hidden"
@@ -309,10 +317,10 @@ function App() {
                   }}
                   className="experience-description-techstack"
                 >
-                  {item.techStack}
+                  {techStack}
                 </motion.p>
               )}
-              {item.link && (
+              {link && (
                 <motion.p
                   className="experince-link"
                   animate={experienceAnimation}
@@ -326,7 +334,7 @@ function App() {
                 >
                   <GoLink size={15} /> See the link{" "}
                   <a
-                    href={item.dateslinkUrl}
+                    href={dateslinkUrl}
                     className="experince-link-a"
                     target="_blank"
                     rel="noreferrer"
@@ -412,7 +420,7 @@ function App() {
           >
             Frontend development coding bootcamp with an extension of +200 hours.
           </motion.p>
-          <motion.p
+          <motion.div
             className="education-skills"
             animate={educationAnimation}
             initial="hidden"
@@ -423,9 +431,9 @@ function App() {
               delay: 0.6,
             }}
           >
-            Skills: HTML5, CSS, Javascript (ES6), ReactJs, Redux, NextJs, Git, Responsive Design,
-            Testing and Debugging, Browser developer tools.
-          </motion.p>
+            <p>Skills:</p>
+            <p>HTML5, CSS, Javascript (ES6), ReactJs, Git.</p>
+          </motion.div>
         </div>
 
         <div className="blog" ref={blogRef}>
@@ -443,10 +451,10 @@ function App() {
             Some posts & study notes
           </motion.h4>
           <div className="blog-wrapper">
-            {media.map((m) => (
+            {media.map(({ id, title, lang, href, isBlog, isLink }) => (
               <motion.div
                 animate={blogAnimation}
-                key={m.key}
+                key={id}
                 className="blog-item"
                 initial="hidden"
                 variants={variants}
@@ -456,23 +464,31 @@ function App() {
                   delay: 0.6,
                 }}
               >
-                {m.isBlog ? (
+                {isBlog && isLink && (
                   <a
-                    href={m.href}
-                    alt={m.title}
+                    href={href}
+                    alt={title}
                     className="blog-item-link"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <GoLink size={15} /> {m.title}
-                  </a>
-                ) : (
-                  <a href={m.href} alt={m.title} download className="blog-item-link">
-                    <GoLink size={15} /> {m.title}
+                    <GoLink size={15} /> {title}
                   </a>
                 )}
 
-                <p className="blog-item-lang">Lang: {m.lang}</p>
+                {!isBlog && isLink && (
+                  <a href={href} alt={title} download className="blog-item-link">
+                    <GoLink size={15} /> {title}
+                  </a>
+                )}
+
+                {!isLink && (
+                  <div>
+                    <GoLink size={15} className="blog-item-link" /> {title}
+                  </div>
+                )}
+
+                <p className="blog-item-lang">Lang: {lang}</p>
               </motion.div>
             ))}
           </div>
