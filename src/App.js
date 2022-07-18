@@ -106,14 +106,14 @@ function App() {
     <>
       {" "}
       <AnimatedCursor
-        color="159, 168, 218"
+        color="0,0,0"
         innerSize={8}
         outerSize={35}
         innerScale={1}
         outerScale={1.7}
         outerAlpha={0}
         outerStyle={{
-          border: "3px solid #9fa8da",
+          border: "1px solid black",
         }}
       />
       <main className="main">
@@ -486,7 +486,9 @@ function App() {
             Linkedin
           </a>
 
-          <a href="/LauraDiazCV.pdf" download></a>
+          <a href="/LauraDiazCV.pdf" download>
+            My CV
+          </a>
 
           <div className="footer-text-one">
             <p>Made with ♥️ by me. </p>
