@@ -30,7 +30,6 @@
     .text-with-img {
       display: flex;
       flex-direction: column-reverse;
-      align-items: center;
 
       @include respond(desktop) {
         flex-direction: row;
@@ -49,6 +48,7 @@
         width: 150px;
         height: 150px;
         border-radius: 50%;
+        align-self: center;
       }
     }
     .about-me-text {
@@ -57,7 +57,7 @@
     }
 
     .frontend {
-      font-size: 1em;
+      font-size: 1.2em;
       position: relative;
       overflow: hidden;
       text-decoration: none;
