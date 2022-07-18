@@ -142,3 +142,184 @@ export const media = [
     isLink: false,
   },
 ];
+
+export const projects = [
+  {
+    id: 102,
+    name: "Fermin Guerrero's Website",
+    type: "Personal website",
+    url: "https://ferminguerrero.com/",
+    code: "https://github.com/lalidiaz/fermin-guerrero-website",
+    stack: ["Nextjs", "Reactjs", "SCSS"],
+  },
+];
+
+export const practiceExercises = [
+  {
+    id: 200,
+    topic: "Javascript Vanilla",
+    repos: [
+      { id: 300, name: "Weather App", url: "https://github.com/lalidiaz/Weather-Fetch" },
+      {
+        id: 3032,
+        name: "Word Association Game",
+        url: "https://github.com/lalidiaz/word-association-javascript-vanilla",
+      },
+
+      {
+        id: 301,
+        name: "My moms artist website",
+        url: "https://github.com/lalidiaz/Ely-AguileraArtWeb",
+      },
+      { id: 490, name: "Random Cat", url: "https://github.com/lalidiaz/RANDOM-CAT" },
+    ],
+  },
+  {
+    id: 201,
+    topic: "CSS",
+    repos: [
+      { id: 302, name: "3D Cards", url: "https://github.com/lalidiaz/Bali-Experience-3DCards" },
+      {
+        id: 303,
+        name: "Parallax Architecture website",
+        url: "https://github.com/lalidiaz/La-Muralla-Roja",
+      },
+    ],
+  },
+  {
+    id: 203,
+    topic: "Reactjs",
+    repos: [
+      {
+        id: 103,
+        name: "Saturnina Pizza App",
+        url: "https://pizza-typescript.web.app/",
+        techStack: "Reactjs, Context API, Typescript",
+      },
+      { id: 304, name: "Change colors", url: "https://github.com/lalidiaz/ChangeColor-ReactJs" },
+      {
+        id: 305,
+        name: "To-do list app",
+        url: "https://github.com/lalidiaz/toDoListReactJs",
+      },
+      {
+        id: 306,
+        name: "Recipe app",
+        url: "https://github.com/lalidiaz/Recipe-ReactJc",
+      },
+      {
+        id: 306,
+        name: "Recipe app",
+        url: "https://github.com/lalidiaz/Recipe-ReactJc",
+      },
+      {
+        id: 306,
+        name: "Tigram app (Instagram version)",
+        url: "https://github.com/lalidiaz/Tigram-App",
+      },
+      {
+        id: 340,
+        name: "Animate website - Framer Motion",
+        url: "https://github.com/lalidiaz/perle-fine",
+      },
+      { id: 342, name: "Tours app", url: "https://github.com/lalidiaz/tours-project-ReactJs" },
+      { id: 343, name: "Accordion", url: "https://github.com/lalidiaz/accordion-ReactJs" },
+      { id: 344, name: "Food Menu", url: "https://github.com/lalidiaz/food-menu-ReactJs" },
+      { id: 345, name: "Tabs Menu", url: "https://github.com/lalidiaz/dev-portfolio-tabs-ReactJs" },
+      { id: 346, name: "Slider", url: "https://github.com/lalidiaz/slider-reactJs" },
+      {
+        id: 347,
+        name: "Color Generator",
+        url: "https://github.com/lalidiaz/colors-generator-ReactJs",
+      },
+      {
+        id: 348,
+        name: "Grocery App",
+        url: "https://github.com/lalidiaz/grocery-app-ReactJs",
+      },
+      {
+        id: 349,
+        name: "Paragraphs Generator",
+        url: "https://github.com/lalidiaz/paragraph-generator-ReactJs",
+      },
+      {
+        id: 349,
+        name: "Paragraphs Generator",
+        url: "https://github.com/lalidiaz/paragraph-generator-ReactJs",
+      },
+      {
+        id: 350,
+        name: "Reviews slider",
+        url: "https://github.com/lalidiaz/reviews-project-ReactJs",
+      },
+      {
+        id: 351,
+        name: "Birthday App",
+        url: "https://github.com/lalidiaz/birthday-app-ReactJs",
+      },
+      {
+        id: 352,
+        name: "Navbar",
+        url: "https://github.com/lalidiaz/navbar-reactjs",
+      },
+      {
+        id: 354,
+        name: "Sidebar (Context API)",
+        url: "https://github.com/lalidiaz/sidebar-useContext-and-ContextAPI",
+      },
+      {
+        id: 355,
+        name: "Submenu (Context API)",
+        url: "https://github.com/lalidiaz/submenu-useContext-Reactjs",
+      },
+      {
+        id: 356,
+        name: "Checkout cart",
+        url: "https://github.com/lalidiaz/cart-usecontext-usereducer-ReactJs",
+      },
+      {
+        id: 357,
+        name: "E-commerce - Typescript",
+        url: "https://github.com/lalidiaz/e-commerce-ReactJs-Typescript",
+      },
+      {
+        id: 358,
+        name: "Social Media App - Nextjs",
+        url: "https://github.com/lalidiaz/dev-socialmedia-nextjs",
+      },
+    ],
+  },
+  {
+    id: 204,
+    topic: "React - Redux",
+    repos: [
+      { id: 307, name: "Counter", url: "https://github.com/lalidiaz/Counter-Redux" },
+      {
+        id: 308,
+        name: "To-do list Redux app",
+        url: "https://github.com/lalidiaz/toDoList-Redux",
+      },
+      {
+        id: 309,
+        name: "Login example app",
+        url: "https://github.com/lalidiaz/redux-example",
+      },
+    ],
+  },
+  {
+    id: 205,
+    topic: "React Native",
+    repos: [
+      {
+        id: 310,
+        name: "Crypto Tracker App",
+        url: "https://github.com/lalidiaz/cryptotracker-React-Native",
+      },
+      {
+        id: 311,
+        name: "Spotify Clone - Typescript",
+        url: "https://github.com/lalidiaz/Spotify-Clone-React-Native",
+      },
+    ],
+  },
+];

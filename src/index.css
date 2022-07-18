@@ -4,7 +4,8 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Merriweather", serif;
-  background-color: #ede9de;
+  background-color: rgb(241, 237, 237);
+  color: black;
 }
 
 @media only screen and (max-width: 600px) {
@@ -22,6 +23,4 @@ a {
   box-sizing: border-box;
 }
 
-/* li {
-  list-style: none;
-} */
+

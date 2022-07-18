@@ -1,176 +1,159 @@
+.wrapper-component {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2;
+  padding: 0px 20px;
+
+  @include respond(desktop) {
+    padding: 0px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1;
+  }
+}
+
 .main {
   height: 100%;
   width: 100%;
+  padding: 40px 0px 0px 0px;
 
-  .container {
-    background: $gray;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  @include respond(desktop) {
+    padding: 100px 0px 0px 0px;
+  }
+  .text {
+    width: 100%;
+    grid-column: 1;
 
     @include respond(desktop) {
-      height: 100%;
-      flex-direction: row;
+      grid-column: 3/11;
     }
 
-    .left {
+    .text-with-img {
       display: flex;
-      flex-direction: column;
-      height: 100%;
-      width: 100%;
+      flex-direction: column-reverse;
+      align-items: center;
 
       @include respond(desktop) {
-        width: 60%;
-
-        min-height: 700px;
+        flex-direction: row;
+        justify-content: space-between;
       }
-    }
-
-    .text {
-      width: 100%;
-      color: $white;
-      padding: 20px;
-
-      @include respond(desktop) {
-        padding: 100px;
-      }
-
       h3 {
-        font-size: 2em;
+        font-size: 1.6em;
         font-weight: 700;
       }
 
       h1 {
         font-weight: 700;
-        font-size: 2em;
-
-        @include respond(desktop) {
-          font-size: 2.254em;
-        }
+        font-size: 1.6em;
       }
-
-      .frontend {
-        font-size: 2em;
-
-        @include respond(desktop) {
-          font-size: 2.254em;
-        }
-      }
-      .frontend-icons {
-        text-align: center;
-        display: flex;
-        align-items: center;
-
-        @include respond(desktop) {
-          text-align: left;
-        }
-      }
-
-      div {
-        a {
-          .icon {
-            height: 40px;
-            width: 40px;
-            margin: 10px;
-          }
-        }
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
       }
     }
+    .about-me-text {
+      font-size: 1em;
+      line-height: 32px;
+    }
 
-    .right {
-      background-color: $cream;
-      width: 100%;
-      padding: 30px 20px 0px 20px;
+    .frontend {
+      font-size: 1em;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      color: #1b1e1c;
+      width: 280px;
 
       @include respond(desktop) {
-        width: 40%;
-        padding: 100px;
+        font-size: 1.6em;
       }
-      .avatar {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        border: 2px solid $gray;
+      &:hover {
+        padding: 5px 10px;
+        color: rgb(235, 235, 235);
+        transition: 0.35s cubic-bezier(0.25, 0.1, 0, 1);
       }
-      .about-me {
-        font-family: $lato;
-        color: $gray;
 
-        font-size: 2em;
-
-        @include respond(desktop) {
-          font-size: 2.254em;
-        }
+      &::after {
+        content: "";
+        border-radius: 30px;
+        background: rgba(#9fa8da, 0.35);
+        position: absolute;
+        left: 12px;
+        bottom: -1px;
+        width: calc(100% - 8px);
+        height: calc(100% - 12px);
+        z-index: -1;
+        transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
       }
-      .about-me-text {
-        font-size: 1em;
-        line-height: 32px;
+      &:hover:after {
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
 
-        @include respond(desktop) {
-          font-size: 1.2em;
-        }
+        background: rgba(#121212, 0.95);
       }
     }
   }
   .experience {
-    padding: 20px;
-    border-bottom: 1px solid $gray;
+    grid-column: 1;
 
     @include respond(desktop) {
-      padding: 0px 100px 50px 100px;
+      grid-column: 3/11;
     }
-    h4 {
+
+    .experience-title {
       color: $gray;
       font-family: $lato;
-      font-size: 2em;
+      font-size: 1.2em;
+      grid-row: 1;
     }
-    .experience-card {
-      padding: 0px 0px 20px 0px;
 
-      .experience-dates {
-        font-weight: 300;
-        font-style: italic;
-      }
-      .experience-title {
-        font-weight: 700;
-      }
-      .experience-description {
-        font-weight: 300;
-      }
+    .experience-card-wrapper {
+      grid-row: 2;
 
-      .experience-description-techstack {
-        padding: 10px;
-        width: auto;
-        border-radius: 4px;
-        border-top: 1px dotted $gray;
-        border-bottom: 1px dotted $gray;
-      }
+      .experience-card {
+        line-height: 32px;
 
-      .experince-link {
-        font-style: italic;
-        .experince-link-a {
-          text-decoration: underline;
+        @include respond(desktop) {
+          padding: 0px 0px 40px 0px;
+        }
+        .experience-dates {
+          font-weight: bold;
+        }
+        .experience-title {
+          font-weight: 700;
+          font-size: 1.2em;
+        }
+        .experience-description {
+          font-weight: 300;
+        }
+
+        .experience-description-techstack {
+        }
+
+        .experince-link {
+          .experince-link-a {
+            text-decoration: underline;
+            color: gray;
+          }
         }
       }
     }
   }
 
   .skills {
-    padding: 0px 20px 20px;
-    border-bottom: 1px solid $gray;
+    grid-column: 1;
 
     @include respond(desktop) {
-      padding: 0px 0px 50px 100px;
+      grid-column: 3/11;
     }
     .skills-title {
       color: $gray;
       font-family: $lato;
-      font-size: 2em;
+      font-size: 1.6em;
     }
     .skills-list {
-      list-style: none;
-
-      padding-left: 0px;
       .skills-list-item {
         line-height: 52px;
       }
@@ -178,16 +161,16 @@
   }
 
   .education {
-    padding: 0px 20px 20px;
-    border-bottom: 1px solid $gray;
+    grid-column: 1;
 
     @include respond(desktop) {
-      padding: 0px 0px 50px 100px;
+      grid-column: 3/11;
     }
+
     .education-title {
       color: $gray;
       font-family: $lato;
-      font-size: 2em;
+      font-size: 1.6em;
     }
     .education-name {
       font-weight: 700;
@@ -202,17 +185,146 @@
     }
   }
 
-  .blog {
-    padding: 0px 20px;
+  .projects {
+    grid-column: 1;
 
     @include respond(desktop) {
-      padding: 0px 0px 50px 100px;
+      grid-column: 3/11;
+    }
+    .projects-title {
+      color: $gray;
+      font-family: $lato;
+      font-size: 1.6em;
+      grid-column: 1;
+      grid-row: 1;
+
+      @include respond(desktop) {
+        grid-column: 3/11;
+        grid-row: 1;
+      }
+    }
+
+    .projects-card {
+      border: 1px solid black;
+      padding: 20px;
+      grid-column: 1;
+      grid-row: 2;
+
+      border-radius: 30px;
+
+      @include respond(desktop) {
+        grid-column: 3/7;
+        grid-row: 2;
+      }
+
+      .project-card-subtitle {
+        font-size: 0.8em;
+      }
+      .project-card-title {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      .project-card-stack-container {
+        display: flex;
+        padding: 20px 0px;
+
+        .project-card-description {
+          font-size: 1em;
+        }
+      }
+
+      .project-card-stack {
+        display: flex;
+        margin: 10px 10px 10px 0px;
+        font-size: 0.8em;
+        padding: 10px;
+
+        p {
+          background-color: black;
+          color: white;
+          border-radius: 30px;
+        }
+      }
+      .project-card-button-container {
+        display: flex;
+
+        a {
+          border: 1px solid black;
+          background-color: transparent;
+          cursor: pointer;
+          padding: 10px;
+          margin: 0px 20px 0px 0px;
+          border-radius: 30px;
+        }
+        a:hover {
+          border: 1px solid black;
+          background-color: black;
+          color: white;
+          top: -6px;
+          left: -6px;
+          box-shadow: 6px 6px 0px $violet;
+        }
+      }
+    }
+    .practice-cards-wrapper {
+      grid-column: 3/11;
+
+      .practice-cards {
+        width: 100%;
+        padding: 0px;
+
+        h4 {
+          font-size: 1.2em;
+        }
+
+        .practice-cards-repos {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          grid-column: 3/11;
+
+          @include respond(desktop) {
+            flex-direction: row;
+          }
+          .repos {
+            padding: 20px;
+            width: 100%;
+            background-color: black;
+            border: 1px solid black;
+            color: white;
+            margin: 10px 10px 10px 0px;
+            cursor: pointer;
+            border-radius: 30px;
+
+            @include respond(desktop) {
+              width: 30%;
+              margin: 10px 10px 10px 0px;
+            }
+          }
+          .repos:hover {
+            border: 1px solid black;
+            background-color: transparent;
+            color: black;
+            top: -6px;
+            left: -6px;
+            box-shadow: 6px 6px 0px $violet;
+          }
+        }
+      }
+    }
+  }
+
+  .blog {
+    grid-column: 1;
+
+    @include respond(desktop) {
+      grid-column: 3/11;
     }
 
     .blog-title {
       color: $gray;
       font-family: $lato;
-      font-size: 2em;
+      font-size: 1.6em;
     }
     .blog-wrapper {
       display: flex;
@@ -223,12 +335,13 @@
         flex-wrap: wrap;
         flex-direction: row;
       }
+
       .blog-item {
         padding: 20px 0px;
         width: 100%;
 
         @include respond(desktop) {
-          width: 33%;
+          width: 50%;
         }
       }
       .blog-item-link {
@@ -236,19 +349,16 @@
         font-weight: 300;
         text-decoration: underline;
       }
-      .blog-item-lang {
-      }
     }
   }
 
   .email-wrapper {
-    border: 1px solid $gray;
     text-align: left;
-    padding: 20px 20px 100px 20px;
+    grid-column: 1;
+    padding: 40px 0px 200px 0px;
 
     @include respond(desktop) {
-      text-align: center;
-      padding: 50px 100px 100px;
+      grid-column: 3/11;
     }
 
     .email-text {
@@ -260,16 +370,65 @@
   }
 
   footer {
-    color: $cream;
-    background-color: $gray;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 20px;
+    color: white;
+    background-color: $violet;
+
     width: 100%;
     position: fixed;
     bottom: 0px;
     font-size: 0.8em;
     font-family: $lato;
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 5;
+    text-align: center;
+
+    @include respond(desktop) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    a:nth-child(1) {
+      grid-column: 1;
+      @include respond(desktop) {
+        grid-column: 3/4;
+        grid-row: 1;
+        padding: 20px 0px;
+      }
+    }
+
+    a:nth-child(2) {
+      grid-column: 1;
+      @include respond(desktop) {
+        grid-column: 4/5;
+        grid-row: 1;
+        padding: 20px 0px;
+      }
+    }
+
+    a:nth-child(3) {
+      grid-column: 1;
+      @include respond(desktop) {
+        grid-column: 5/6;
+        grid-row: 1;
+        padding: 20px 0px;
+      }
+    }
+
+    .footer-text-one {
+      grid-column: 1;
+
+      @include respond(desktop) {
+        grid-column: 8/10;
+        grid-row: 1;
+      }
+    }
+    .footer-text-two {
+      grid-column: 1;
+      @include respond(desktop) {
+        grid-column: 10;
+        grid-row: 1;
+      }
+    }
   }
 }
