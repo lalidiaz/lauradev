@@ -344,6 +344,7 @@
 
     a:nth-child(1) {
       grid-column: 1;
+      padding: 0px 0px 20px 0px;
       @include respond(desktop) {
         grid-column: 3/4;
         grid-row: 1;
@@ -353,6 +354,7 @@
 
     a:nth-child(2) {
       grid-column: 1;
+      padding: 0px 0px 20px 0px;
       @include respond(desktop) {
         grid-column: 4/5;
         grid-row: 1;
@@ -362,6 +364,7 @@
 
     a:nth-child(3) {
       grid-column: 1;
+
       @include respond(desktop) {
         grid-column: 5/6;
         grid-row: 1;
