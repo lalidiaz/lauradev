@@ -13,7 +13,6 @@ function App() {
   const isMobile = width <= 768;
 
   const greetingAnimation = useAnimation();
-  const experienceAnimation = useAnimation();
   const skillsAnimation = useAnimation();
   const blogAnimation = useAnimation();
   const contactAnimation = useAnimation();
@@ -24,10 +23,7 @@ function App() {
     triggerOnce: true,
     rootMargin: isMobile ? "-50px" : "-100px",
   });
-  const [experienceRef, experienceInView] = useInView({
-    triggerOnce: true,
-    rootMargin: isMobile ? "-75px" : "-100px",
-  });
+
   const [skillsRef, skillsInView] = useInView({
     triggerOnce: true,
     rootMargin: isMobile ? "-75px" : "-100px",
@@ -54,12 +50,6 @@ function App() {
       greetingAnimation.start("visible");
     }
   }, [greetingAnimation, greetingInView]);
-
-  useEffect(() => {
-    if (experienceInView) {
-      experienceAnimation.start("visible");
-    }
-  }, [experienceAnimation, experienceInView]);
 
   useEffect(() => {
     if (blogInView) {

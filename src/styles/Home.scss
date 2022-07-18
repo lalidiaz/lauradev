@@ -95,52 +95,6 @@
       }
     }
   }
-  .experience {
-    grid-column: 1;
-
-    @include respond(desktop) {
-      grid-column: 3/11;
-    }
-
-    .experience-title {
-      color: $gray;
-      font-family: $lato;
-      font-size: 1.2em;
-      grid-row: 1;
-    }
-
-    .experience-card-wrapper {
-      grid-row: 2;
-
-      .experience-card {
-        line-height: 32px;
-
-        @include respond(desktop) {
-          padding: 0px 0px 40px 0px;
-        }
-        .experience-dates {
-          font-weight: bold;
-        }
-        .experience-title {
-          font-weight: 700;
-          font-size: 1.2em;
-        }
-        .experience-description {
-          font-weight: 300;
-        }
-
-        .experience-description-techstack {
-        }
-
-        .experince-link {
-          .experince-link-a {
-            text-decoration: underline;
-            color: gray;
-          }
-        }
-      }
-    }
-  }
 
   .skills {
     grid-column: 1;
