@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import { experiences, media, practiceExercises, projects } from "./texts";
+import { media, practiceExercises, projects } from "./texts";
 import Wrapper from "./components/Wrapper";
 import AnimatedCursor from "react-animated-cursor";
-import { GoLink } from "react-icons/go";
+import InsertLinkIcon from "@mui/icons-material/InsertLink";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -420,19 +420,19 @@ function App() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <GoLink size={15} /> {title}
+                      <InsertLinkIcon /> {title}
                     </a>
                   )}
 
                   {!isBlog && isLink && (
                     <a href={href} alt={title} download className="blog-item-link">
-                      <GoLink size={15} /> {title}
+                      <InsertLinkIcon /> {title}
                     </a>
                   )}
 
                   {!isLink && (
                     <div>
-                      <GoLink size={15} className="blog-item-link" /> {title}
+                      <InsertLinkIcon  className="blog-item-link" /> {title}
                     </div>
                   )}
 
