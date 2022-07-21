@@ -13,7 +13,6 @@ function App() {
 
   const greetingAnimation = useAnimation();
   const skillsAnimation = useAnimation();
-  const blogAnimation = useAnimation();
   const contactAnimation = useAnimation();
   const projectsAnimation = useAnimation();
   const aboutAnimation = useAnimation();
@@ -120,7 +119,7 @@ function App() {
             }}
           >
             Hi, I'm Laura. <br />
-            Frontend Engineer.
+            Frontend developer.
           </motion.h1>
           <motion.div
             className="grid"
