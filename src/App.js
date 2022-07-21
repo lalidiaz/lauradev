@@ -142,7 +142,7 @@ function App() {
                 {" "}
                 <Typewriter
                   options={{
-                    strings: ["Work in a collaborative environment", "Learn new things"],
+                    strings: ["working in a collaborative environment", "Learn new things"],
                     autoStart: true,
                     loop: true,
                   }}
