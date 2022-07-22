@@ -136,22 +136,27 @@ function App() {
               <div className="grid-row-elem">Currently in</div>
               <div className="grid-row-elem">Dubai, UAE </div>
             </div>
+
+            <div className="grid-row">
+              <div className="grid-row-elem">Working with</div>
+              <div className="grid-row-elem">Reactjs | Nextjs | Typescript | Redux </div>
+            </div>
             <div className="grid-row">
               <div className="grid-row-elem">I enjoy</div>
               <div className="grid-row-elem">
                 {" "}
                 <Typewriter
                   options={{
-                    strings: ["working in a collaborative environment", "Learn new things"],
+                    strings: [
+                      "working in a collaborative environment",
+                      "Learning new things",
+                      "Share what I learn",
+                    ],
                     autoStart: true,
                     loop: true,
                   }}
                 />
               </div>
-            </div>
-            <div className="grid-row">
-              <div className="grid-row-elem">working with</div>
-              <div className="grid-row-elem">Reactjs | Nextjs | Typescript | Redux </div>
             </div>
           </motion.div>
         </section>

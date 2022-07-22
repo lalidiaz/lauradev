@@ -21,8 +21,9 @@
       letter-spacing: -0.033rem;
       font-weight: 400;
       font-style: normal;
-      font-size: 2em;
+      font-size: 1.2em;
       line-height: auto;
+      font-weight: bold;
 
       @include respond(desktop) {
         font-size: 4em;
@@ -44,8 +45,6 @@
         @include respond(desktop) {
           flex-direction: row;
         }
-        .grid-row-elem {
-        }
       }
     }
   }
@@ -64,7 +63,7 @@
     }
 
     h2 {
-      font-size: 2em;
+      font-size: 1.2em;
       line-height: 4.944rem;
 
       @include respond(desktop) {
@@ -80,7 +79,7 @@
       line-height: 1.556rem;
 
       @include respond(desktop) {
-        font-size: 1.2em;
+        font-size: 1em;
         width: 50%;
       }
     }
@@ -99,21 +98,21 @@
 
     .skill {
       padding: 20px 0px;
-      font-size: 2em;
+      font-size: 1em;
       @include respond(desktop) {
-        font-size: 4em;
+        font-size: 2em;
       }
     }
     .skill-circle {
-      height: 30px;
-      width: 30px;
+      height: 15px;
+      width: 15px;
       border-radius: 50%;
       display: inline-block;
       background-color: #fef851;
 
       @include respond(desktop) {
-        height: 60px;
-        width: 60px;
+        height: 30px;
+        width: 30px;
       }
     }
   }
@@ -121,7 +120,7 @@
   .projects-section {
     h2 {
       padding: 20px;
-      font-size: 2em;
+      font-size: 1.6em;
       line-height: 4.944rem;
       text-align: left;
 
@@ -134,7 +133,6 @@
     .projects-container {
       background-color: #0d0d0d;
       display: flex;
-
       justify-content: center;
       flex-direction: column;
       width: 100%;
@@ -222,9 +220,10 @@
     background-color: white;
     width: 100%;
     color: #0d0d0d;
-    font-size: 1.6em;
+    font-size: 1em;
 
     @include respond(desktop) {
+      font-size: 1.2em;
       padding: 50px 200px 100px 200px;
     }
   }
