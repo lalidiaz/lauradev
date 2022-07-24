@@ -339,6 +339,12 @@ function App() {
               </div>
             </div>
             <div className="grid-row">
+              <div className="grid-row-elem">My CV</div>
+              <div className="grid-row-elem">
+                <a href="/LauraDiazCV.pdf">Download</a>
+              </div>
+            </div>
+            <div className="grid-row">
               <div className="grid-row-elem">Linkedin</div>
               <div className="grid-row-elem">
                 <a href="https://www.linkedin.com/in/lauradiaz91/" rel="noreferrer" target="_blank">
@@ -364,14 +370,14 @@ function App() {
             </div>
           </motion.div>
         </section>
-
+        </main>
         <footer>
           <div className="footer-text">
             <p>Made with ♥️ by me. </p>
             <p>Laura © 2022</p>
           </div>
         </footer>
-      </main>
+
     </>
   );
 }

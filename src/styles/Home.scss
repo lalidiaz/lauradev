@@ -283,6 +283,7 @@ footer {
   font-size: 0.8em;
   background-color: beige;
   color: #1a4edd;
+  font-family: $open-sans;
 
   @include respond(desktop) {
     padding: 50px 200px 50px 200px;
