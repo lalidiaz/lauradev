@@ -183,9 +183,11 @@ function App() {
               delay: 0.5,
             }}
           >
-            I'm a Front End Engineer with two years of experience, learning strong fundamentals in
-            Front End technologies. I like building scalable web infrastructure and making websites
-            fast. Passionate about tech, javascript, currently learning about UX.
+            Front End Engineer since 2020, self motivated individual learning strong fundamentals in
+            Front End technologies.
+            <br /> Currently working to make beautiful, funcional, and accessible websites. I focus
+            on creating an engaging user experience. Passionate about tech, javaScript and I love
+            learning new things.
           </motion.p>
         </section>
         <ul className="skills-section" ref={skillsRef}>
@@ -333,7 +335,7 @@ function App() {
             }}
           >
             <div className="grid-row">
-              <div className="grid-row-elem">email</div>
+              <div className="grid-row-elem">Email</div>
               <div className="grid-row-elem">
                 <a href="mailto:lauradiaz1586@gmail.com">lauradiaz1586@gmail</a>
               </div>
@@ -370,14 +372,13 @@ function App() {
             </div>
           </motion.div>
         </section>
-        </main>
-        <footer>
-          <div className="footer-text">
-            <p>Made with ♥️ by me. </p>
-            <p>Laura © 2022</p>
-          </div>
-        </footer>
-
+      </main>
+      <footer>
+        <div className="footer-text">
+          <p>Made with ♥️ by me. </p>
+          <p>Laura © 2022</p>
+        </div>
+      </footer>
     </>
   );
 }
