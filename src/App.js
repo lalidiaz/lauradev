@@ -77,6 +77,7 @@ function App() {
     "Redux",
     "Nextjs",
     "Reactjs",
+    "Typescript",
     "Testing and Debugging",
     "Browser developer tools",
     "Responsive Design",
@@ -262,7 +263,7 @@ function App() {
                   </div>
                 </div>
                 {url && (
-                  <div className="projects-card-inner">
+                  <div className="projects-card-inner-url">
                     <p>Url</p>
                     <a href={url} target="_blank" rel="noreferrer">
                       {url}

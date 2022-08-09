@@ -197,8 +197,19 @@
           .projects-card-inner-title-circle {
             width: 20px;
             height: 20px;
-            background-color: #1a4edd;
+            background-color: $blue;
             border-radius: 50%;
+          }
+        }
+        .projects-card-inner-url {
+          border-bottom: 1px solid #0d0d0d;
+          display: flex;
+          justify-content: space-between;
+
+          a {
+            display: flex;
+            align-items: center;
+            color: $blue;
           }
         }
         .projects-card-inner {
@@ -209,6 +220,7 @@
           a {
             display: flex;
             align-items: center;
+            color: $blue;
           }
         }
       }

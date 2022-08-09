@@ -21,9 +21,27 @@ export const projects = [
     id: 3,
     name: "Task manager app",
     type: "Practice skills",
-    url: "https://pizza-typescript.web.app/",
+    url: "https://task-manager-typescript-react.vercel.app/",
     code: "https://github.com/lalidiaz/task-manager-typescript-react",
     stack: ["Reactjs", "Context API", "Typescript"],
+  },
+
+  {
+    id: 8,
+    name: "Food Menu",
+    type: "Practice skills",
+    url: "https://food-menu-react-js.vercel.app/",
+    code: "https://github.com/lalidiaz/food-menu-ReactJs",
+    stack: ["Reactjs"],
+  },
+
+  {
+    id: 7,
+    name: "Accordion",
+    type: "Practice skills",
+    url: "https://accordion-react-js.vercel.app/",
+    code: "https://github.com/lalidiaz/accordion-ReactJs",
+    stack: ["Reactjs"],
   },
   {
     id: 4,
@@ -33,10 +51,10 @@ export const projects = [
     stack: ["Reactjs"],
   },
   {
-    id: 5,
-    name: "Recipe app",
+    id: 21,
+    name: "Checkout cart",
     type: "Practice skills",
-    code: "https://github.com/lalidiaz/Recipe-ReactJc",
+    code: "https://github.com/lalidiaz/cart-usecontext-usereducer-ReactJs",
     stack: ["Reactjs"],
   },
   {
@@ -47,18 +65,18 @@ export const projects = [
     stack: ["Reactjs"],
   },
   {
-    id: 7,
-    name: "Accordion",
+    id: 5,
+    name: "Recipe app",
     type: "Practice skills",
-    code: "https://github.com/lalidiaz/accordion-ReactJs",
+    code: "https://github.com/lalidiaz/Recipe-ReactJc",
     stack: ["Reactjs"],
   },
   {
-    id: 8,
-    name: "Food Menu",
+    id: 22,
+    name: "E-commerce",
     type: "Practice skills",
-    code: "https://github.com/lalidiaz/food-menu-ReactJs",
-    stack: ["Reactjs"],
+    code: "https://github.com/lalidiaz/e-commerce-ReactJs-Typescript",
+    stack: ["Reactjs", "Typescript"],
   },
   {
     id: 9,
@@ -87,6 +105,13 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/grocery-app-ReactJs",
     stack: ["Reactjs"],
+  },
+  {
+    id: 29,
+    name: "Word Association Game",
+    type: "Practice skills",
+    code: "https://github.com/lalidiaz/word-association-javascript-vanilla",
+    stack: ["Javascript Vanilla"],
   },
   {
     id: 13,
@@ -148,20 +173,6 @@ export const projects = [
   },
 
   {
-    id: 21,
-    name: "Checkout cart",
-    type: "Practice skills",
-    code: "https://github.com/lalidiaz/cart-usecontext-usereducer-ReactJs",
-    stack: ["Reactjs"],
-  },
-  {
-    id: 22,
-    name: "E-commerce",
-    type: "Practice skills",
-    code: "https://github.com/lalidiaz/e-commerce-ReactJs-Typescript",
-    stack: ["Reactjs", "Typescript"],
-  },
-  {
     id: 23,
     name: "Social Media App",
     type: "Practice skills",
@@ -201,13 +212,6 @@ export const projects = [
     name: "Weather App",
     type: "Practice skills",
     code: "https://github.com/lalidiaz/Weather-Fetch",
-    stack: ["Javascript Vanilla"],
-  },
-  {
-    id: 29,
-    name: "Word Association Game",
-    type: "Practice skills",
-    code: "https://github.com/lalidiaz/word-association-javascript-vanilla",
     stack: ["Javascript Vanilla"],
   },
 
