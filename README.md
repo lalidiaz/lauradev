@@ -1,3 +1,6 @@
-My new portfolio ♥️ https://laura-diaz-dev-af1e1.web.app/
+#### My new portfolio ♥️ 
 
-![Screen Shot 2022-06-26 at 12 54 26 AM](https://user-images.githubusercontent.com/60779542/175790266-19151d8d-5f2e-47df-91c7-d53f63edd7c2.png)
+https://lauradiazdev.com/
+
+
+![Screen Shot 2022-11-12 at 1 52 10 PM](https://user-images.githubusercontent.com/60779542/201468731-ae944542-7b17-4133-9d09-c86490438a31.png)
