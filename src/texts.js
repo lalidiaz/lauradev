@@ -7,6 +7,7 @@ export const projects = [
     url: "https://ferminguerrero.com/",
     code: "https://github.com/lalidiaz/fermin-guerrero-website",
     stack: ["Nextjs", "Reactjs", "SCSS"],
+    app: "website",
   },
 
   {
@@ -16,6 +17,7 @@ export const projects = [
     url: "https://pizza-typescript.web.app/",
     code: "https://github.com/lalidiaz/pizza-typescript-react",
     stack: ["Reactjs", "Context API", "Typescript"],
+    app: "website",
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ export const projects = [
     url: "https://task-manager-typescript-react.vercel.app/",
     code: "https://github.com/lalidiaz/task-manager-typescript-react",
     stack: ["Reactjs", "Context API", "Typescript"],
+    app: "website",
   },
 
   {
@@ -33,6 +36,7 @@ export const projects = [
     url: "https://food-menu-react-js.vercel.app/",
     code: "https://github.com/lalidiaz/food-menu-ReactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
 
   {
@@ -42,6 +46,7 @@ export const projects = [
     url: "https://accordion-react-js.vercel.app/",
     code: "https://github.com/lalidiaz/accordion-ReactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 4,
@@ -49,6 +54,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/ChangeColor-ReactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 21,
@@ -56,6 +62,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/cart-usecontext-usereducer-ReactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 6,
@@ -63,6 +70,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/tours-project-ReactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 5,
@@ -70,6 +78,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/Recipe-ReactJc",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 22,
@@ -77,6 +86,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/e-commerce-ReactJs-Typescript",
     stack: ["Reactjs", "Typescript"],
+    app: "tiny-website",
   },
   {
     id: 9,
@@ -84,6 +94,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/dev-portfolio-tabs-ReactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 10,
@@ -91,6 +102,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/slider-reactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 11,
@@ -98,6 +110,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/colors-generator-ReactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 12,
@@ -105,6 +118,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/grocery-app-ReactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 29,
@@ -112,6 +126,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/word-association-javascript-vanilla",
     stack: ["Javascript Vanilla"],
+    app: "website",
   },
   {
     id: 13,
@@ -119,6 +134,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/paragraph-generator-ReactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
 
   {
@@ -127,13 +143,17 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/reviews-project-ReactJs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
+
   {
     id: 15,
     name: "Birthday App",
     type: "Practice skills",
     code: "https://github.com/lalidiaz/birthday-app-ReactJs",
     stack: ["Reactjs"],
+    filter: "learn",
+    app: "tiny-website",
   },
   {
     id: 16,
@@ -141,6 +161,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/navbar-reactjs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 17,
@@ -148,6 +169,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/sidebar-useContext-and-ContextAPI",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
   {
     id: 18,
@@ -155,50 +177,25 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/submenu-useContext-Reactjs",
     stack: ["Reactjs"],
+    app: "tiny-website",
   },
 
-  {
-    id: 19,
-    name: "Tigram app (Instagram version)",
-    type: "Practice skills",
-    code: "https://github.com/lalidiaz/Tigram-App",
-    stack: ["Reactjs"],
-  },
-  {
-    id: 20,
-    name: "Animate website",
-    type: "Practice skills",
-    code: "https://github.com/lalidiaz/perle-fine",
-    stack: ["Reactjs", "Framer Motion"],
-  },
-
-  {
-    id: 23,
-    name: "Social Media App",
-    type: "Practice skills",
-    code: "https://github.com/lalidiaz/dev-socialmedia-nextjs",
-    stack: ["Nextjs"],
-  },
   {
     id: 24,
     name: "Counter",
     type: "Practice skills",
     code: "https://github.com/lalidiaz/Counter-Redux",
     stack: ["Reactjs", "Redux"],
+    app: "tiny-website",
   },
-  {
-    id: 25,
-    name: "Login example app",
-    type: "Practice skills",
-    code: "https://github.com/lalidiaz/redux-example",
-    stack: ["Reactjs", "Redux"],
-  },
+
   {
     id: 26,
     name: "Crypto Tracker App",
     type: "Practice skills",
     code: "https://github.com/lalidiaz/cryptotracker-React-Native",
     stack: ["Reactjs Native"],
+    app: "website",
   },
   {
     id: 27,
@@ -206,6 +203,7 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/Spotify-Clone-React-Native",
     stack: ["Reactjs Native"],
+    app: "website",
   },
   {
     id: 28,
@@ -213,14 +211,17 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/Weather-Fetch",
     stack: ["Javascript Vanilla"],
+    app: "website",
   },
 
   {
     id: 30,
     name: "My moms artist website",
     type: "Practice skills",
-    code: "https://github.com/lalidiaz/Ely-AguileraArtWeb",
+    code: "",
+    url: "https://ely-aguilera.vercel.app/",
     stack: ["Javascript Vanilla"],
+    app: "website",
   },
   {
     id: 31,
@@ -235,12 +236,6 @@ export const projects = [
     type: "Practice skills",
     code: "https://github.com/lalidiaz/Bali-Experience-3DCards",
     stack: ["CSS"],
-  },
-  {
-    id: 33,
-    name: "Parallax Architecture website",
-    type: "Practice skills",
-    code: "https://github.com/lalidiaz/La-Muralla-Roja",
-    stack: ["CSS"],
+    app: "tiny-website",
   },
 ];

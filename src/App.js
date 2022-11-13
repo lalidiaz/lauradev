@@ -1,13 +1,39 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import { projects } from "./texts";
 import AnimatedCursor from "react-animated-cursor";
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import useWindowDimensions from "./hooks/useWindowDimensions";
 import Typewriter from "typewriter-effect";
+import Text from "./components/Text";
+import Title from "./components/Title";
+import { skills } from "./conventions";
+import Card from "./components/Card";
+import AnimateContent from "./components/AnimateContent";
+import {
+  Hero,
+  UpperContent,
+  Grid,
+  GridRow,
+  GridRowElem,
+  SkillSection,
+  Skill,
+  SkillCircle,
+  ProjectsContainer,
+  ProjectCard,
+  ProjectCardTitle,
+  ProjectCardTitleCircle,
+  TechStack,
+  EmailSection,
+  ContactSection,
+  Footer,
+  AboutSection,
+  AboutTextContainer,
+  ProjectsSection,
+} from "./styles/Home";
 
-function App() {
+const App = () => {
   const { width } = useWindowDimensions();
   const isMobile = width <= 768;
 
@@ -41,6 +67,7 @@ function App() {
   });
 
   useEffect(() => {
+    console.log("RENDER");
     if (greetingInView) {
       greetingAnimation.start("visible");
     }
@@ -70,20 +97,6 @@ function App() {
     }
   }, [projectsAnimation, projectsInView]);
 
-  const skills = [
-    "HTML5",
-    "CSS",
-    "Javascript (ES6)",
-    "Redux",
-    "Nextjs",
-    "Reactjs",
-    "Typescript",
-    "Testing and Debugging",
-    "Browser developer tools",
-    "Responsive Design",
-    "Git & Github",
-  ];
-
   const variants = {
     visible: {
       opacity: 1,
@@ -91,6 +104,9 @@ function App() {
     },
     hidden: { opacity: 0, y: 72 },
   };
+
+  const website = projects.filter((project) => project.app === "website");
+  const smallApp = projects.filter((project) => project.app === "tiny-website");
 
   return (
     <>
@@ -106,24 +122,22 @@ function App() {
           border: "1px solid rgb(255, 235, 59)",
         }}
       />
-      <main className="main">
-        <section className="upper-content" ref={greetingRef}>
-          <motion.h1
-            className="title"
+      <Hero>
+        <UpperContent ref={greetingRef}>
+          <Title
+            title="Hi, I'm Laura."
+            delay={0.45}
             animate={greetingAnimation}
-            initial="hidden"
             variants={variants}
-            transition={{
-              duration: 0.8,
-              ease: [0.6, 0.05, -0.01, 0.9],
-              delay: 0.45,
-            }}
-          >
-            Hi, I'm Laura. <br />
-            Frontend developer.
-          </motion.h1>
-          <motion.div
-            className="grid"
+          />
+          <Title
+            title="Frontend developer."
+            delay={0.5}
+            animate={greetingAnimation}
+            variants={variants}
+          />
+
+          <Grid
             animate={greetingAnimation}
             initial="hidden"
             variants={variants}
@@ -133,19 +147,18 @@ function App() {
               delay: 0.5,
             }}
           >
-            <div className="grid-row">
-              <div className="grid-row-elem">Currently in</div>
-              <div className="grid-row-elem">Dubai, UAE </div>
-            </div>
+            <GridRow>
+              <GridRowElem>Currently in</GridRowElem>
+              <GridRowElem>Dubai, UAE </GridRowElem>
+            </GridRow>
 
-            <div className="grid-row">
-              <div className="grid-row-elem">Working with</div>
-              <div className="grid-row-elem">Reactjs | Nextjs | Typescript | Redux </div>
-            </div>
-            <div className="grid-row">
-              <div className="grid-row-elem">I enjoy</div>
-              <div className="grid-row-elem">
-                {" "}
+            <GridRow>
+              <GridRowElem>Working with</GridRowElem>
+              <GridRowElem>Reactjs | Nextjs | Typescript | Redux | Styled Components</GridRowElem>
+            </GridRow>
+            <GridRow>
+              <GridRowElem>I enjoy</GridRowElem>
+              <GridRowElem>
                 <Typewriter
                   options={{
                     strings: [
@@ -157,44 +170,44 @@ function App() {
                     loop: true,
                   }}
                 />
-              </div>
-            </div>
-          </motion.div>
-        </section>
-        <section className="about-section" ref={aboutRef}>
-          <motion.h2
-            animate={aboutAnimation}
-            initial="hidden"
-            variants={variants}
-            transition={{
-              duration: 0.8,
-              ease: [0.6, 0.05, -0.01, 0.9],
-              delay: 0.45,
-            }}
-          >
-            About me <span>&#8212;</span>
-          </motion.h2>
-          <motion.p
-            animate={aboutAnimation}
-            initial="hidden"
-            variants={variants}
-            transition={{
-              duration: 0.8,
-              ease: [0.6, 0.05, -0.01, 0.9],
-              delay: 0.5,
-            }}
-          >
-            Front End Engineer since 2020, self motivated individual learning strong fundamentals in
-            Front End technologies.
-            <br /> Currently working to make beautiful, funcional, and accessible websites. I focus
-            on creating an engaging user experience. Passionate about tech, javaScript and I love
-            learning new things.
-          </motion.p>
-        </section>
-        <ul className="skills-section" ref={skillsRef}>
+              </GridRowElem>
+            </GridRow>
+          </Grid>
+        </UpperContent>
+        <AboutSection ref={aboutRef}>
+          <Title animate={aboutAnimation} variants={variants} delay={0.45} title="About me" />
+
+          <AboutTextContainer>
+            <Text
+              animate={aboutAnimation}
+              variants={variants}
+              delay={0.4}
+              text="Frontend Engineer since 2020, self-motivated individual, learning strong fundamentals in
+            web development, passionate about tech and JavaScript."
+            />
+            <Text
+              animate={aboutAnimation}
+              variants={variants}
+              delay={0.5}
+              text="I am currently working in a dynamic team where I am the principal Frontend engineer responsible for developing new user-facing features and products, determining the project structure on the Frontend, and choosing the right technology."
+            />
+            <Text
+              animate={aboutAnimation}
+              variants={variants}
+              delay={0.6}
+              text="I focus on creating an engaging user experience."
+            />
+            <Text
+              animate={aboutAnimation}
+              variants={variants}
+              delay={0.7}
+              text="I am Interested in FullStack development and one of my goals is to become one in the short term."
+            />
+          </AboutTextContainer>
+        </AboutSection>
+        <SkillSection ref={skillsRef}>
           {skills.map((skill, index) => (
-            <motion.li
-              className="skill"
+            <Skill
               key={index}
               animate={skillsAnimation}
               initial="hidden"
@@ -205,25 +218,14 @@ function App() {
                 delay: 0.45,
               }}
             >
-              <div className="skill-circle"></div> {skill}
-            </motion.li>
+              <SkillCircle /> {skill}
+            </Skill>
           ))}
-        </ul>
-        <section className="projects-section" ref={projectsRef}>
-          <motion.h2
-            initial="hidden"
-            variants={variants}
-            animate={projectsAnimation}
-            transition={{
-              duration: 0.8,
-              ease: [0.6, 0.05, -0.01, 0.9],
-              delay: 0.45,
-            }}
-          >
-            Projects <span>&#8212;</span>
-          </motion.h2>
-          <motion.div
-            className="projects-container"
+        </SkillSection>
+        <ProjectsSection ref={projectsRef}>
+          <Title title="Projects" variants={variants} animate={projectsAnimation} delay={0.4} />
+
+          <ProjectsContainer
             animate={projectsAnimation}
             initial="hidden"
             variants={variants}
@@ -233,99 +235,75 @@ function App() {
               delay: 0.6,
             }}
           >
-            {projects.map(({ id, name, url, type, stack, code, client }) => (
-              <div className="projects-card" key={id}>
-                <div className="projects-card-inner-title">
+            {website.map(({ id, name, url, type, stack, code, client }) => (
+              <ProjectCard key={id}>
+                <ProjectCardTitle>
                   <p>Project</p>
-                  <div className="projects-card-inner-title-circle"></div>
-                </div>
-                <div className="projects-card-inner-top">
-                  <p>Name</p>
+                  <ProjectCardTitleCircle />
+                </ProjectCardTitle>
+                <Card label="Name">
                   <p>{name}</p>
-                </div>
-                <div className="projects-card-inner">
-                  <p>Type</p>
-                  <p>{type}</p>
-                </div>
+                </Card>
+
                 {client && (
-                  <div className="projects-card-inner">
-                    <p>Client</p>
+                  <Card label="Client">
                     <p>{client}</p>
-                  </div>
+                  </Card>
                 )}
 
-                <div className="projects-card-inner">
-                  <p>Tech-stack</p>
-                  <div className="projects-card-stack">
+                <Card label="Tech Stack">
+                  <TechStack>
                     {stack.map((s) => (
                       <p key={s}>{s}</p>
                     ))}
-                  </div>
-                </div>
+                  </TechStack>
+                </Card>
                 {url && (
-                  <div className="projects-card-inner-url">
-                    <p>Url</p>
+                  <Card label="URL">
                     <a href={url} target="_blank" rel="noreferrer">
                       {url}
                     </a>
-                  </div>
+                  </Card>
                 )}
                 {code && (
-                  <div className="projects-card-inner">
-                    <p>Code</p>
+                  <Card label="Code">
                     <a href={code} target="_blank" rel="noreferrer">
                       Link
                     </a>
-                  </div>
+                  </Card>
                 )}
+              </ProjectCard>
+            ))}
+
+            {smallApp.map(({ id, name, url, type, stack, code, client }) => (
+              <div>
+                <h1>{name}</h1>
               </div>
             ))}
-          </motion.div>
-        </section>
+          </ProjectsContainer>
+        </ProjectsSection>
 
-        <section className="email-section" ref={contactRef}>
-          <motion.p
-            initial="hidden"
+        <EmailSection ref={contactRef}>
+          <Text
             animate={contactAnimation}
             variants={variants}
-            transition={{
-              duration: 0.8,
-              ease: [0.6, 0.05, -0.01, 0.9],
-              delay: 0.45,
-            }}
-          >
-            {" "}
-            Get in touch! My inbox is always open.
-          </motion.p>
-          <motion.p
-            initial="hidden"
+            delay={0.45}
+            text="Get in touch! My inbox is always open."
+          />
+          <Text
             animate={contactAnimation}
             variants={variants}
-            transition={{
-              duration: 0.8,
-              ease: [0.6, 0.05, -0.01, 0.9],
-              delay: 0.5,
-            }}
-          >
-            Whether you have a question or just want to say hi, I'll try my best to get back to you!
-            🙂
-          </motion.p>
-          <motion.p
-            initial="hidden"
-            animate={contactAnimation}
-            variants={variants}
-            transition={{
-              duration: 0.8,
-              ease: [0.6, 0.05, -0.01, 0.9],
-              delay: 0.6,
-            }}
-          >
+            delay={0.5}
+            text="Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            🙂"
+          />
+
+          <AnimateContent animate={contactAnimation} variants={variants} delay={0.5}>
             <a href="mailto:lauradiaz1586@gmail.com"> lauradiaz1586@gmail.com</a>
-          </motion.p>
-        </section>
-        <section className="contact-section">
-          <motion.div
-            className="grid"
+          </AnimateContent>
+        </EmailSection>
+        <ContactSection>
+          <Grid
             initial="hidden"
             animate={contactAnimation}
             variants={variants}
@@ -335,53 +313,51 @@ function App() {
               delay: 0.6,
             }}
           >
-            <div className="grid-row">
-              <div className="grid-row-elem">Email</div>
-              <div className="grid-row-elem">
+            <GridRow>
+              <GridRowElem>Email</GridRowElem>
+              <GridRowElem>
                 <a href="mailto:lauradiaz1586@gmail.com">lauradiaz1586@gmail</a>
-              </div>
-            </div>
-            <div className="grid-row">
-              <div className="grid-row-elem">My CV</div>
-              <div className="grid-row-elem">
+              </GridRowElem>
+            </GridRow>
+            <GridRow>
+              <GridRowElem>My CV</GridRowElem>
+              <GridRowElem>
                 <a href="/LauraDiazCV.pdf">Download</a>
-              </div>
-            </div>
-            <div className="grid-row">
-              <div className="grid-row-elem">Linkedin</div>
-              <div className="grid-row-elem">
+              </GridRowElem>
+            </GridRow>
+            <GridRow>
+              <GridRowElem>Linkedin</GridRowElem>
+              <GridRowElem>
                 <a href="https://www.linkedin.com/in/lauradiaz91/" rel="noreferrer" target="_blank">
                   https://www.linkedin.com/in/lauradiaz91/
                 </a>
-              </div>
-            </div>
-            <div className="grid-row">
-              <div className="grid-row-elem">Github</div>
-              <div className="grid-row-elem">
+              </GridRowElem>
+            </GridRow>
+            <GridRow>
+              <GridRowElem>Github</GridRowElem>
+              <GridRowElem>
                 <a href="https://github.com/lalidiaz" rel="noreferrer" target="_blank">
                   https://github.com/lalidiaz
                 </a>
-              </div>
-            </div>
-            <div className="grid-row">
-              <div className="grid-row-elem">Medium articles</div>
-              <div className="grid-row-elem">
+              </GridRowElem>
+            </GridRow>
+            <GridRow>
+              <GridRowElem>Medium articles</GridRowElem>
+              <GridRowElem>
                 <a href="https://github.com/lalidiaz" rel="noreferrer" target="_blank">
                   https://lalidiaz.medium.com/
                 </a>
-              </div>
-            </div>
-          </motion.div>
-        </section>
-      </main>
-      <footer>
-        <div className="footer-text">
-          <p>Made with ♥️ by me. </p>
-          <p>Laura © 2022</p>
-        </div>
-      </footer>
+              </GridRowElem>
+            </GridRow>
+          </Grid>
+        </ContactSection>
+      </Hero>
+      <Footer>
+        <p>Made with ♥️ by me. </p>
+        <p>Laura © 2022</p>
+      </Footer>
     </>
   );
-}
+};
 
 export default App;
