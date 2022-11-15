@@ -11,6 +11,7 @@ import Title from "./components/Title";
 import { skills } from "./conventions";
 import Card from "./components/Card";
 import AnimateContent from "./components/AnimateContent";
+import CardPractice from "./components/CardPractice";
 import {
   Hero,
   UpperContent,
@@ -31,6 +32,7 @@ import {
   AboutSection,
   AboutTextContainer,
   ProjectsSection,
+  CardPracticeWrapper,
 } from "./styles/Home";
 
 const App = () => {
@@ -106,7 +108,6 @@ const App = () => {
   };
 
   const website = projects.filter((project) => project.app === "website");
-  const smallApp = projects.filter((project) => project.app === "tiny-website");
 
   return (
     <>
@@ -154,7 +155,7 @@ const App = () => {
 
             <GridRow>
               <GridRowElem>Working with</GridRowElem>
-              <GridRowElem>Reactjs | Nextjs | Typescript | Redux | Styled Components</GridRowElem>
+              <GridRowElem>Reactjs | Nextjs | Typescript | Redux</GridRowElem>
             </GridRow>
             <GridRow>
               <GridRowElem>I enjoy</GridRowElem>
@@ -182,8 +183,7 @@ const App = () => {
               animate={aboutAnimation}
               variants={variants}
               delay={0.4}
-              text="Frontend Engineer since 2020, self-motivated individual, learning strong fundamentals in
-            web development, passionate about tech and JavaScript."
+              text="Frontend Engineer since 2020. A self-motivated individual, learning strong fundamentals in web development and passionate about tech and JavaScript."
             />
             <Text
               animate={aboutAnimation}
@@ -201,7 +201,7 @@ const App = () => {
               animate={aboutAnimation}
               variants={variants}
               delay={0.7}
-              text="I am Interested in FullStack development and one of my goals is to become one in the short term."
+              text="I am interested in FullStack development, and one of my goals is to become one in the short term."
             />
           </AboutTextContainer>
         </AboutSection>
@@ -254,7 +254,7 @@ const App = () => {
                 <Card label="Tech Stack">
                   <TechStack>
                     {stack.map((s) => (
-                      <p key={s}>{s}</p>
+                      <p key={s}>{s} |</p>
                     ))}
                   </TechStack>
                 </Card>
@@ -275,11 +275,13 @@ const App = () => {
               </ProjectCard>
             ))}
 
-            {smallApp.map(({ id, name, url, type, stack, code, client }) => (
-              <div>
-                <h1>{name}</h1>
-              </div>
-            ))}
+            {/* <CardPracticeWrapper>
+              <Title title="Small examples to practice" />
+
+              {smallApp.map(({ id, name, stack, code }) => (
+                <CardPractice key={id} name={name} code={code} stack={stack} />
+              ))}
+            </CardPracticeWrapper> */}
           </ProjectsContainer>
         </ProjectsSection>
 

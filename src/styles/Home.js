@@ -65,7 +65,7 @@ export const AboutSection = styled.section`
 
   @media ${device.laptop} {
     padding: 200px 150px;
-    height: 500px;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -75,8 +75,10 @@ export const AboutSection = styled.section`
 
 export const AboutTextContainer = styled.div`
   width: 100%;
+  font-size: 1rem;
   @media ${device.laptop} {
     width: 65%;
+    font-size: 1.3rem;
   }
 `;
 
@@ -111,6 +113,8 @@ export const SkillSection = styled.ul`
 
   @media ${device.laptop} {
     padding: 200px 150px;
+    display: flex;
+    flex-wrap: wrap;
   }
 `;
 
@@ -119,6 +123,7 @@ export const Skill = styled(motion.li)`
   font-size: 1rem;
   @media ${device.laptop} {
     font-size: 1.5rem;
+    width: 33%;
   }
 `;
 
@@ -170,11 +175,7 @@ export const ProjectCard = styled.div`
   padding: 30px;
 
   &:hover {
-    background-image: none;
     background-color: rgba(237, 105, 41, 1);
-    background-size: auto;
-    background-position: 0% 0%;
-    background-repeat: no-repeat;
   }
 
   @media ${device.tablet} {
@@ -224,6 +225,31 @@ export const CardWrapper = styled.div`
   }
 `;
 
+export const CardPracticeWrapper = styled.div`
+  width: 100%;
+`;
+
+export const CardPracticeStyle = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e6e6dc;
+  color: #0d0d0d;
+  margin: 8px 0px;
+  padding: 8px;
+
+  &:hover {
+    background-color: #448aff;
+    color: yellow;
+  }
+`;
+
+export const CardPracticeStyleLeft = styled.div`
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+`;
+
 export const EmailSection = styled.section`
   padding: 20px;
   height: auto;
@@ -231,10 +257,12 @@ export const EmailSection = styled.section`
   width: 100%;
   color: #0d0d0d;
   font-size: 1rem;
+  text-align: center;
 
   @media ${device.laptop} {
     font-size: 1.2rem;
     padding: 200px 150px;
+    line-height: 3rem;
   }
 `;
 
@@ -242,6 +270,7 @@ export const ContactSection = styled.section`
   width: 100%;
   padding: 20px;
   background-color: #e64a19;
+  font-size: 1rem;
 
   a {
     color: white;

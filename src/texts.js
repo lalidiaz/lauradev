@@ -216,7 +216,7 @@ export const projects = [
 
   {
     id: 30,
-    name: "My moms artist website",
+    name: "Art academy website (collaboration)",
     type: "Practice skills",
     code: "",
     url: "https://ely-aguilera.vercel.app/",
