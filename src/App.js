@@ -11,7 +11,6 @@ import Title from "./components/Title";
 import { skills } from "./conventions";
 import Card from "./components/Card";
 import AnimateContent from "./components/AnimateContent";
-import CardPractice from "./components/CardPractice";
 import {
   Hero,
   UpperContent,
@@ -33,6 +32,7 @@ import {
   AboutTextContainer,
   ProjectsSection,
   CardPracticeWrapper,
+  CardLink,
 } from "./styles/Home";
 
 const App = () => {
@@ -260,16 +260,16 @@ const App = () => {
                 </Card>
                 {url && (
                   <Card label="URL">
-                    <a href={url} target="_blank" rel="noreferrer">
+                    <CardLink href={url} target="_blank" rel="noreferrer">
                       {url}
-                    </a>
+                    </CardLink>
                   </Card>
                 )}
                 {code && (
                   <Card label="Code">
-                    <a href={code} target="_blank" rel="noreferrer">
+                    <CardLink href={code} target="_blank" rel="noreferrer">
                       Link
-                    </a>
+                    </CardLink>
                   </Card>
                 )}
               </ProjectCard>

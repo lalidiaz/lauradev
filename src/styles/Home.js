@@ -38,20 +38,21 @@ export const GridRow = styled.div`
 
   @media ${device.laptop} {
     flex-direction: row;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 
 export const GridRowElem = styled.div`
   padding: 10px 0px;
-  @media ${device.laptop} {
-    padding: 0px;
-  }
+
   a {
     background-color: #dd6d4b;
     color: blue;
     padding: 10px;
     border-radius: 0.55556rem;
+  }
+  @media ${device.laptop} {
+    padding: 0px;
   }
 `;
 
@@ -241,6 +242,14 @@ export const CardPracticeStyle = styled.div`
   &:hover {
     background-color: #448aff;
     color: yellow;
+  }
+`;
+
+export const CardLink = styled.a`
+  color: blue;
+
+  &:visited {
+    color: blue;
   }
 `;
 
