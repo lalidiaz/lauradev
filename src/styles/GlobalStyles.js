@@ -20,10 +20,6 @@ export const GlobalStyles = createGlobalStyle`
       text-decoration: none;
     }
     
-    a:visited {
-      color: white;
-    }
-    
     ol,
     ul {
       list-style: none;
