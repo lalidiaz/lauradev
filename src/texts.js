@@ -6,7 +6,7 @@ export const projects = [
     client: "Fermin Guerrero",
     url: "https://ferminguerrero.com/",
     code: "https://github.com/lalidiaz/fermin-guerrero-website",
-    stack: ["Nextjs", "Reactjs", "SCSS"],
+    stack: ["Nextjs", "SCSS"],
     app: "website",
   },
 
@@ -29,6 +29,15 @@ export const projects = [
     app: "website",
   },
 
+  {
+    id: 900,
+    name: "Frotnend Coding Challenge",
+    type: "Coding Challenge",
+    url: "https://frontend-challenge-qtp5.vercel.app/",
+    code: "https://github.com/lalidiaz/Frontend-CRUD-APP-challenge",
+    stack: ["Reactjs", "Redux"],
+    app: "website",
+  },
   {
     id: 8,
     name: "Food Menu",
@@ -220,7 +229,7 @@ export const projects = [
     type: "Practice skills",
     code: "",
     url: "https://ely-aguilera.vercel.app/",
-    stack: ["Javascript Vanilla"],
+    stack: ["React"],
     app: "website",
   },
   {
