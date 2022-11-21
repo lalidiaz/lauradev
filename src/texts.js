@@ -31,8 +31,8 @@ export const projects = [
 
   {
     id: 900,
-    name: "Frotnend Coding Challenge",
-    type: "Coding Challenge",
+    name: "Frontend Coding Challenge",
+    type: "Practice skills",
     url: "https://frontend-challenge-qtp5.vercel.app/",
     code: "https://github.com/lalidiaz/Frontend-CRUD-APP-challenge",
     stack: ["Reactjs", "Redux"],
