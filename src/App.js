@@ -155,7 +155,7 @@ const App = () => {
 
             <GridRow>
               <GridRowElem>Working with</GridRowElem>
-              <GridRowElem>Reactjs | Nextjs | Typescript | Redux</GridRowElem>
+              <GridRowElem>Reactjs | Nextjs | Typescript | Redux </GridRowElem>
             </GridRow>
             <GridRow>
               <GridRowElem>I enjoy</GridRowElem>

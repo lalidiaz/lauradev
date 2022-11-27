@@ -9,6 +9,14 @@ export const projects = [
     stack: ["Nextjs", "SCSS"],
     app: "website",
   },
+  {
+    id: 99,
+    name: "Task Manager app (Nodejs)",
+    type: "Practice skills",
+    code: "https://github.com/lalidiaz/node-task-manager",
+    stack: ["Nodejs"],
+    app: "website",
+  },
 
   {
     id: 2,
