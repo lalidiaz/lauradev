@@ -14,10 +14,17 @@ export const projects = [
     name: "Task Manager app (Nodejs)",
     type: "Practice skills",
     code: "https://github.com/lalidiaz/node-task-manager",
-    stack: ["Nodejs"],
+    stack: ["Nodejs", "Express"],
     app: "website",
   },
-
+  {
+    id: 990,
+    name: "Store API",
+    type: "Practice skills",
+    code: "https://github.com/lalidiaz/node-store-api",
+    stack: ["Nodejs", "Express"],
+    app: "website",
+  },
   {
     id: 2,
     name: "Saturnina Pizza App",

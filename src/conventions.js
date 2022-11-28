@@ -11,4 +11,5 @@ export const skills = [
   "Responsive Design",
   "Git & Github",
   "SQL",
+  "Nodejs (Express)",
 ];
