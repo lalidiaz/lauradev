@@ -18,6 +18,14 @@ export const projects = [
     app: "website",
   },
   {
+    id: 9249,
+    name: "JWT Basics - Login authentication",
+    type: "Practice skills",
+    code: "https://github.com/lalidiaz/node-express-JWT-Basics",
+    stack: ["Nodejs", "Express"],
+    app: "website",
+  },
+  {
     id: 990,
     name: "Store API",
     type: "Practice skills",
