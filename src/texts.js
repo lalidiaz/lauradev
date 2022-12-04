@@ -10,6 +10,15 @@ export const projects = [
     app: "website",
   },
   {
+    id: 9239,
+    name: "Jobs API V1",
+    type: "Practice skills",
+    url: "https://jobs-api-yq8f.onrender.com/",
+    code: "https://github.com/lalidiaz/jobs-api-V1",
+    stack: ["Nodejs", "Express"],
+    app: "website",
+  },
+  {
     id: 99,
     name: "Task Manager app (Nodejs)",
     type: "Practice skills",
