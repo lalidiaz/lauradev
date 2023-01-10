@@ -69,7 +69,6 @@ const App = () => {
   });
 
   useEffect(() => {
-    console.log("RENDER");
     if (greetingInView) {
       greetingAnimation.start("visible");
     }
@@ -183,7 +182,7 @@ const App = () => {
               animate={aboutAnimation}
               variants={variants}
               delay={0.4}
-              text="Frontend Engineer since 2020. A self-motivated individual, learning strong fundamentals in web development and passionate about tech and JavaScript."
+              text="Frontend Engineer since 2020. A self-motivated individual, learning strong fundamentals in web development and passionate about tech."
             />
             <Text
               animate={aboutAnimation}
@@ -195,14 +194,9 @@ const App = () => {
               animate={aboutAnimation}
               variants={variants}
               delay={0.6}
-              text="I focus on creating an engaging user experience."
+              text="I’ve been learning Nodejs and worked on fullstack projects where I implemented my new skills."
             />
-            <Text
-              animate={aboutAnimation}
-              variants={variants}
-              delay={0.7}
-              text="I am interested in FullStack development, and one of my goals is to become one in the short term."
-            />
+
           </AboutTextContainer>
         </AboutSection>
         <SkillSection ref={skillsRef}>
@@ -318,7 +312,7 @@ const App = () => {
             <GridRow>
               <GridRowElem>Email</GridRowElem>
               <GridRowElem>
-                <a href="mailto:lauradiaz1586@gmail.com">lauradiaz1586@gmail</a>
+                <a href="mailto:lauradiaz1586@gmail.com">lauradiaz1586@gmail.com</a>
               </GridRowElem>
             </GridRow>
             <GridRow>

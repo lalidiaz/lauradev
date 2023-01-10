@@ -99,9 +99,12 @@ export const TextStyle = styled(motion.p)`
   letter-spacing: 0.006rem;
   font-size: 1.1rem;
   line-height: 1.556rem;
+  padding:10px 0px;
 
   @media ${device.laptop} {
     font-size: 1em;
+     padding:15px 0px;
+    
   }
 `;
 

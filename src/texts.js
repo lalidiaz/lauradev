@@ -10,6 +10,15 @@ export const projects = [
     app: "website",
   },
   {
+    id: 925639,
+    name: "Job Tracker App",
+    type: "Practice skills",
+    url: "https://job-platform-v2.onrender.com",
+    code: "https://github.com/lalidiaz/job-platform",
+    stack: ["React", "Redux", "Nodejs", "Express", "Mongo"],
+    app: "website",
+  },
+  {
     id: 9239,
     name: "Jobs API V1",
     type: "Practice skills",
