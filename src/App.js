@@ -248,7 +248,7 @@ const App = () => {
                 <Card label="Tech Stack">
                   <TechStack>
                     {stack.map((s) => (
-                      <p key={s}>{s} |</p>
+                      <p key={s}>{s} </p>
                     ))}
                   </TechStack>
                 </Card>

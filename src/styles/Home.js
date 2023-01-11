@@ -86,9 +86,11 @@ export const AboutTextContainer = styled.div`
 export const TitleStyle = styled(motion.h2)`
   font-size: 1.2rem;
   line-height: 4.944rem;
+  padding:20px;
   @media ${device.laptop} {
     font-size: 3rem;
     line-height: 5rem;
+    padding:0px;
   }
 `;
 
@@ -145,7 +147,8 @@ export const SkillCircle = styled.div`
 `;
 
 export const ProjectsSection = styled.section`
-  padding: 20px;
+  padding:20px;
+ 
   @media ${device.laptop} {
     padding: 200px 150px;
   }
@@ -172,11 +175,11 @@ export const ProjectsContainer = styled(motion.section)`
 `;
 
 export const ProjectCard = styled.div`
-  width: 100%;
+  width: auto;
   background-color: #e6e6dc;
   color: #0d0d0d;
   margin: 8px 0px;
-  padding: 30px;
+  padding:20px;
 
   &:hover {
     background-color: rgba(237, 105, 41, 1);
@@ -184,10 +187,12 @@ export const ProjectCard = styled.div`
 
   @media ${device.tablet} {
     width: 49%;
+      padding: 30px;
   }
 
   @media ${device.laptop} {
     width: 49%;
+    padding: 30px;
   }
 `;
 
@@ -204,8 +209,9 @@ export const ProjectCardTitle = styled.div`
 
 export const TechStack = styled.div`
   display: flex;
+  flex-direction:column;
   p {
-    padding-left: 10px;
+    padding:5px 0px;
   }
 `;
 
