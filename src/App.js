@@ -154,7 +154,7 @@ const App = () => {
 
             <GridRow>
               <GridRowElem>Working with</GridRowElem>
-              <GridRowElem>Reactjs | Nextjs | Typescript | Redux </GridRowElem>
+              <GridRowElem>Reactjs | Nextjs | Typescript | Redux | Node </GridRowElem>
             </GridRow>
             <GridRow>
               <GridRowElem>I enjoy</GridRowElem>
@@ -309,6 +309,14 @@ const App = () => {
               delay: 0.6,
             }}
           >
+            <GridRow>
+              <GridRowElem>My DevOps Journey</GridRowElem>
+              <GridRowElem>
+                <a href="https://dev.to/lalilunar/starting-my-journey-to-the-cloud-2icg" rel="noreferrer" target="_blank">
+                  Blog
+                </a>
+              </GridRowElem>
+            </GridRow>
             <GridRow>
               <GridRowElem>Email</GridRowElem>
               <GridRowElem>
