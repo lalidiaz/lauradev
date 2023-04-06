@@ -154,7 +154,9 @@ const App = () => {
 
             <GridRow>
               <GridRowElem>Working with</GridRowElem>
-              <GridRowElem>Reactjs | Nextjs | Typescript | Redux | Node </GridRowElem>
+              <GridRowElem>
+                Reactjs | Nextjs | Typescript | Redux | Node{" "}
+              </GridRowElem>
             </GridRow>
             <GridRow>
               <GridRowElem>I enjoy</GridRowElem>
@@ -175,28 +177,32 @@ const App = () => {
           </Grid>
         </UpperContent>
         <AboutSection ref={aboutRef}>
-          <Title animate={aboutAnimation} variants={variants} delay={0.45} title="About me" />
+          <Title
+            animate={aboutAnimation}
+            variants={variants}
+            delay={0.45}
+            title="About me"
+          />
 
           <AboutTextContainer>
             <Text
               animate={aboutAnimation}
               variants={variants}
               delay={0.4}
-              text="Frontend Engineer since 2020. A self-motivated individual, learning strong fundamentals in web development and passionate about tech."
+              text="I have been working as a Frontend Engineer since 2020. As a self-motivated individual, I am committed to developing strong fundamentals in web development and passionate about technology."
             />
             <Text
               animate={aboutAnimation}
               variants={variants}
               delay={0.5}
-              text="I am currently working in a dynamic team where I am the principal Frontend engineer responsible for developing new user-facing features and products, determining the project structure on the Frontend, and choosing the right technology."
+              text="Currently, I work in a dynamic team where I serve as the principal Frontend engineer. My responsibilities include developing new user-facing features and products, determining the project structure on the Frontend, and selecting the appropriate technology."
             />
             <Text
               animate={aboutAnimation}
               variants={variants}
               delay={0.6}
-              text="I’ve been learning Nodejs and worked on fullstack projects where I implemented my new skills."
+              text="Recently, I have been learning Nodejs and have worked on full-stack projects where I have applied my new skills."
             />
-
           </AboutTextContainer>
         </AboutSection>
         <SkillSection ref={skillsRef}>
@@ -217,7 +223,12 @@ const App = () => {
           ))}
         </SkillSection>
         <ProjectsSection ref={projectsRef}>
-          <Title title="Projects" variants={variants} animate={projectsAnimation} delay={0.4} />
+          <Title
+            title="Projects"
+            variants={variants}
+            animate={projectsAnimation}
+            delay={0.4}
+          />
 
           <ProjectsContainer
             animate={projectsAnimation}
@@ -294,8 +305,15 @@ const App = () => {
             🙂"
           />
 
-          <AnimateContent animate={contactAnimation} variants={variants} delay={0.5}>
-            <a href="mailto:lauradiaz1586@gmail.com"> lauradiaz1586@gmail.com</a>
+          <AnimateContent
+            animate={contactAnimation}
+            variants={variants}
+            delay={0.5}
+          >
+            <a href="mailto:lauradiaz1586@gmail.com">
+              {" "}
+              lauradiaz1586@gmail.com
+            </a>
           </AnimateContent>
         </EmailSection>
         <ContactSection>
@@ -309,18 +327,24 @@ const App = () => {
               delay: 0.6,
             }}
           >
-            <GridRow>
+            {/* <GridRow>
               <GridRowElem>My DevOps Journey</GridRowElem>
               <GridRowElem>
-                <a href="https://dev.to/lalilunar/starting-my-journey-to-the-cloud-2icg" rel="noreferrer" target="_blank">
+                <a
+                  href="https://dev.to/lalilunar/starting-my-journey-to-the-cloud-2icg"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   Blog
                 </a>
               </GridRowElem>
-            </GridRow>
+            </GridRow> */}
             <GridRow>
               <GridRowElem>Email</GridRowElem>
               <GridRowElem>
-                <a href="mailto:lauradiaz1586@gmail.com">lauradiaz1586@gmail.com</a>
+                <a href="mailto:lauradiaz1586@gmail.com">
+                  lauradiaz1586@gmail.com
+                </a>
               </GridRowElem>
             </GridRow>
             <GridRow>
@@ -332,7 +356,11 @@ const App = () => {
             <GridRow>
               <GridRowElem>Linkedin</GridRowElem>
               <GridRowElem>
-                <a href="https://www.linkedin.com/in/lauradiaz91/" rel="noreferrer" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/lauradiaz91/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   https://www.linkedin.com/in/lauradiaz91/
                 </a>
               </GridRowElem>
@@ -340,7 +368,11 @@ const App = () => {
             <GridRow>
               <GridRowElem>Github</GridRowElem>
               <GridRowElem>
-                <a href="https://github.com/lalidiaz" rel="noreferrer" target="_blank">
+                <a
+                  href="https://github.com/lalidiaz"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   https://github.com/lalidiaz
                 </a>
               </GridRowElem>
@@ -348,7 +380,11 @@ const App = () => {
             <GridRow>
               <GridRowElem>Medium articles</GridRowElem>
               <GridRowElem>
-                <a href="https://github.com/lalidiaz" rel="noreferrer" target="_blank">
+                <a
+                  href="https://github.com/lalidiaz"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   https://lalidiaz.medium.com/
                 </a>
               </GridRowElem>
