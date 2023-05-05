@@ -45,58 +45,40 @@ const App = () => {
   const projectsAnimation = useAnimation();
   const aboutAnimation = useAnimation();
 
-  const [greetingRef, greetingInView] = useInView({
-    triggerOnce: true,
-    rootMargin: isMobile ? "-50px" : "-100px",
-  });
-  const [aboutRef, aboutInView] = useInView({
-    triggerOnce: true,
-    rootMargin: isMobile ? "-50px" : "-100px",
-  });
+  const useInViewWithMargin = (rootMargin) => {
+    return useInView({
+      triggerOnce: true,
+      rootMargin: rootMargin,
+    });
+  };
 
-  const [skillsRef, skillsInView] = useInView({
-    triggerOnce: true,
-    rootMargin: isMobile ? "-75px" : "-100px",
-  });
+  const [greetingRef, greetingInView] = useInViewWithMargin(
+    isMobile ? "-50px" : "-100px"
+  );
+  const [aboutRef, aboutInView] = useInViewWithMargin(
+    isMobile ? "-50px" : "-100px"
+  );
+  const [skillsRef, skillsInView] = useInViewWithMargin(
+    isMobile ? "-75px" : "-100px"
+  );
+  const [contactRef, contactInView] = useInViewWithMargin("-100px");
+  const [projectsRef, projectsInView] = useInViewWithMargin("-100px");
 
-  const [contactRef, contactInView] = useInView({
-    triggerOnce: true,
-    rootMargin: "-100px",
-  });
-  const [projectsRef, projectsInView] = useInView({
-    triggerOnce: true,
-    rootMargin: "-100px",
-  });
-
-  useEffect(() => {
-    if (greetingInView) {
-      greetingAnimation.start("visible");
-    }
-  }, [greetingAnimation, greetingInView]);
+  const elements = [
+    { ref: greetingRef, animation: greetingAnimation, inView: greetingInView },
+    { ref: aboutRef, animation: aboutAnimation, inView: aboutInView },
+    { ref: skillsRef, animation: skillsAnimation, inView: skillsInView },
+    { ref: contactRef, animation: contactAnimation, inView: contactInView },
+    { ref: projectsRef, animation: projectsAnimation, inView: projectsInView },
+  ];
 
   useEffect(() => {
-    if (aboutInView) {
-      aboutAnimation.start("visible");
-    }
-  }, [aboutAnimation, aboutInView]);
-
-  useEffect(() => {
-    if (contactInView) {
-      contactAnimation.start("visible");
-    }
-  }, [contactAnimation, contactInView]);
-
-  useEffect(() => {
-    if (skillsInView) {
-      skillsAnimation.start("visible");
-    }
-  }, [skillsAnimation, skillsInView]);
-
-  useEffect(() => {
-    if (projectsInView) {
-      projectsAnimation.start("visible");
-    }
-  }, [projectsAnimation, projectsInView]);
+    elements.forEach((element) => {
+      if (element.inView) {
+        element.animation.start("visible");
+      }
+    });
+  }, [elements]);
 
   const variants = {
     visible: {
@@ -189,13 +171,13 @@ const App = () => {
               animate={aboutAnimation}
               variants={variants}
               delay={0.4}
-              text="I have been working as a Frontend Engineer since 2020. As a self-motivated individual, I am committed to developing strong fundamentals in web development and passionate about technology."
+              text="I have been working as a Frontend Developer since 2020. As a self-motivated individual, I am committed to developing strong fundamentals in web development and passionate about technology."
             />
             <Text
               animate={aboutAnimation}
               variants={variants}
               delay={0.5}
-              text="Currently, I work in a dynamic team where I serve as the principal Frontend engineer. My responsibilities include developing new user-facing features and products, determining the project structure on the Frontend, and selecting the appropriate technology."
+              text="Currently, I work in a dynamic team where I serve as the only Frontend Developer. My responsibilities include developing new user-facing features and products, determining the project structure on the Frontend, and selecting the appropriate technology."
             />
             <Text
               animate={aboutAnimation}
@@ -377,7 +359,7 @@ const App = () => {
                 </a>
               </GridRowElem>
             </GridRow>
-            <GridRow>
+            {/* <GridRow>
               <GridRowElem>Medium articles</GridRowElem>
               <GridRowElem>
                 <a
@@ -388,7 +370,7 @@ const App = () => {
                   https://lalidiaz.medium.com/
                 </a>
               </GridRowElem>
-            </GridRow>
+            </GridRow> */}
           </Grid>
         </ContactSection>
       </Hero>
